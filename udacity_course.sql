@@ -1,3 +1,5 @@
+--IN checks if values are within a list.
+
 --SELECT all columns FROM accounts tables, limit 10 rows
 SELECT *
 FROM accounts
@@ -175,6 +177,27 @@ SELECT name
 FROM accounts
 WHERE name NOT LIKE '%s';
 
+--Q1.44: Write a query that returns all the orders where the standard_qty is over 1000, the poster_qty is 0, 
+--and the gloss_qty is 0.
 
+
+--Q1.44: Using the accounts table, find all the companies whose names do not start with 'C' and end with 's.
+
+--Q1.44 When you use the BETWEEN operator in SQL, do the results include the values of your endpoints, or not? 
+--Figure out the answer to this important question by writing a query that displays the order date and gloss_qty data 
+--for all orders where gloss_qty is between 24 and 29. Then look at your output to see if the BETWEEN operator included 
+--the begin and end values or not
+
+--Q1.44 Use the web_events table to find all information regarding individuals who were contacted via the organic or 
+--adwords channels, and started their account at any point in 2016, sorted from newest to oldest.
+
+--Q1.47 Find list of orders ids where either gloss_qty or poster_qty is greater than 4000. Only include the id field 
+--in the resulting table.
+
+--Q1.47 Write a query that returns a list of orders where the standard_qty is zero and either the gloss_qty or poster_qty 
+--is over 1000.
+
+--Q1.47 Find all the company names that start with a 'C' or 'W', and the primary contact contains 'ana' or 'Ana', 
+--but it doesn't contain 'eana'.
 
 
