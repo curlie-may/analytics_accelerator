@@ -129,4 +129,52 @@ SELECT name
 FROM accounts
 WHERE name LIKE '%s';
 
+--Use the accounts table to find the account name, primary_poc, and sales_rep_id for Walmart, Target and Norstrom
+SELECT 
+     name,
+     primary_poc,
+     sales_rep_id
+FROM accounts
+WHERE name IN ('Walmart', 'Target', 'Nordstrom');
+
+--Use the web_events table to find all the informaiton regarding individuals who were contacted via the channel 
+--or organic or adwords
+SELECT * 
+FROM web_events
+WHERE channel IN ('organic', 'adwords');
+
+--Use the accounts table to find the account name, primary poc, and sales rep id for all stores except Walmart, Target, and Nordstrom.
+SELECT 
+    name,
+    primary_poc,
+    sales_rep_id
+FROM accounts
+WHERE name NOT IN ('Walmart', 'Target', 'Nordstrom');
+
+--Use the web_events table to find all information regarding individuals who were contacted via any method except using 
+--organic or adwords method
+SELECT *
+FROM web_events
+WHERE channel NOT IN ('organic', 'adwords');
+
+--Use the accounts table to find:
+--All the companies whose names do not start with 'C'.
+SELECT name
+FROM accounts
+WHERE name NOT LIKE 'C%';
+
+--Use the accounts table to find:
+--All companies whose names do not contain the string 'one' somewhere in the name.
+SELECT name
+FROM accounts
+WHERE name NOT LIKE '%one%';
+
+--Use the accounts table to find:
+--All companies whose names do not end with 's'.
+SELECT name
+FROM accounts
+WHERE name NOT LIKE '%s';
+
+
+
 
