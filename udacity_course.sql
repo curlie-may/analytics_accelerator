@@ -261,6 +261,16 @@ WHERE a.name = 'Walmart';
 
 --Q3.11 Provide a table that provides the region for each sales_rep along with their associated accounts. Your final table should 
 --include three columns: the region name, the sales rep name, and the account name. Sort the accounts alphabetically (A-Z) according to account name. 
+SELECT sales_reps.name AS sales_rep_name,  --MUST HAVE ALIASES since all are .name!!
+       region.name AS region_name,
+       accounts.name AS accounts_name
+FROM sales_reps
+JOIN region
+ON sales_reps.region_id = region.id 
+JOIN accounts
+ON accounts.sales_rep_id = sales_reps.id
+ORDER BY accounts.name ASC
+
 
 
 --Q3.11 Provide the name for each region for every order, as well as the account name and the unit price they paid (total_amt_usd/total) for the order. 
