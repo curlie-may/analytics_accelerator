@@ -254,29 +254,36 @@ SELECT a.primary_poc,
       w.occurred_at,
       w.channel,
       a.name
-FROM web_events AS w
-JOIN accounts AS a
+FROM web_events w
+JOIN accounts a
 ON w.account_id = a.id
 WHERE a.name = 'Walmart';
 
 --Q3.11 Provide a table that provides the region for each sales_rep along with their associated accounts. Your final table should 
 --include three columns: the region name, the sales rep name, and the account name. Sort the accounts alphabetically (A-Z) according to account name. 
-SELECT sales_reps.name AS sales_rep_name,  --MUST HAVE ALIASES since all are .name!!
-       region.name AS region_name,
-       accounts.name AS accounts_name
-FROM sales_reps
+SELECT sales_reps.name AS sales_rep_name,  -- ====================================================
+       region.name AS region_name,     --MUST HAVE ALIASES since all are .name!!
+       accounts.name AS accounts_name  --Don't need the AS!! Can just put: region.name region_name
+FROM sales_reps                         -- =========================================================
 JOIN region
 ON sales_reps.region_id = region.id 
 JOIN accounts
 ON accounts.sales_rep_id = sales_reps.id
-ORDER BY accounts.name ASC
-
-
+ORDER BY accounts.name  -- Ascending is the default ORDER BY xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 --Q3.11 Provide the name for each region for every order, as well as the account name and the unit price they paid (total_amt_usd/total) for the order. 
 --Your final table should have 3 columns: region name, account name, and unit price. A few accounts have 0 for total, so I divided by (total + 0.01) 
---to assure not dividing by zero.
-
+--to assure not dividing by zero.    ============================================================
+SELECT region.name AS region_name,  -- Don't need the AS!! Can just put: region.name reiong_name
+accounts.name AS accounts_name,     -- Don't need the AS!!  ====================================
+(orders.total_amt_usd/(orders.total+.01)) AS unit_price -- Remember, don't need the AS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FROM accounts
+JOIN orders
+ON accounts.id = orders.account_id 
+JOIN sales_reps
+ON accounts.sales_rep_id = sales_reps.id
+JOIN region
+ON sales_reps.region_id = region.id
 
 
 
