@@ -274,7 +274,7 @@ ORDER BY accounts.name  -- Ascending is the default ORDER BY xxxxxxxxxxxxxxxxxxx
 --Q3.11 Provide the name for each region for every order, as well as the account name and the unit price they paid (total_amt_usd/total) for the order. 
 --Your final table should have 3 columns: region name, account name, and unit price. A few accounts have 0 for total, so I divided by (total + 0.01) 
 --to assure not dividing by zero.    ============================================================
-SELECT region.name AS region_name,  -- Don't need the AS!! Can just put: region.name reiong_name
+SELECT region.name AS region_name,  -- Don't need the AS!! Can just put: region.name region_name
 accounts.name AS accounts_name,     -- Don't need the AS!!  ====================================
 (orders.total_amt_usd/(orders.total+.01)) AS unit_price -- Remember, don't need the AS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 FROM accounts
