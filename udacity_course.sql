@@ -338,22 +338,28 @@ FROM orders;
 
 
 --Q4.14 #1  Which account (by name) placed the earliest order? Your solution should have the account name and the date of the order.
-SELECT account_id, occurred_at
-FROM orders
+SELECT a.name, o.occurred_at
+FROM accounts AS a
+JOIN orders AS o
+ON a.id = o.account_id 
 ORDER BY occurred_at
 LIMIT 1;
 
 --Q4.14 #2 Find the total sales in usd for each account. You should include two columns - the total sales for each company's orders 
 --in usd and the company name. 
-SELECT SUM(total), account_id 
-FROM orders
-GROUP BY account_id;
+SELECT a.name, SUM(o.total_amt_usd) as total_sales 
+FROM accounts AS a
+JOIN orders AS o
+ON a.id = o.account_id 
+GROUP BY a.name; 
 
 --Q4.14 #3 Via what channel did the most recent (latest) web_event occur, which account was associated with this web_event? 
 --Your query should return only three values - the date, channel, and account name.
-SELECT occurred_at, channel, account_id 
-FROM web_events
-ORDER BY channel DESC
+SELECT w.occurred_at, w.channel, a.name 
+FROM web_events AS w
+JOIN accounts AS a 
+ON a.id = w.account_id
+ORDER BY w.occurred_at DESC
 LIMIT 1;
 
 --Q4.14 #4 Find the total number of times each type of channel from the web_events was used. Your final table should have 
@@ -393,10 +399,11 @@ ORDER BY smallest_order;
 
 --Q4.14 #7 Find the number of sales reps in each region. Your final table should have two columns - the region and 
 --the number of sales_reps. Order from fewest reps to most reps.
-SELECT r.name, SUM(sales_rep_id) AS reps_total
-FROM accounts AS a
-JOIN sales_reps AS r
-ON r.id = a.sales_rep_id
+SELECT r.name, COUNT(*) AS reps_total
+FROM region as r
+JOIN sales_reps AS s
+ON s.region_id = r.id
 GROUP BY r.name
 ORDER BY reps_total;
+
 
