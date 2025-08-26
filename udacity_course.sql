@@ -456,8 +456,19 @@ GROUP BY r.name, w.channel
 ORDER BY number_of_occurrences DESC;
 
 --Q4.20 #1 Use DISTINCT to test if there are any accounts associated with more than one region.
+SELECT DISTINCT a.name AS account_name, r.name AS region_name  
+FROM accounts a 
+JOIN sales_reps
+ON sales_reps.id = a.sales_rep_id
+JOIN region r
+ON sales_reps.id = r.id;
 
 --Q4.20 #2 Have any sales reps worked on more than one account?
+SELECT sales_reps.name AS rep_name, accounts.name AS account_name  
+FROM accounts 
+JOIN sales_reps
+ON sales_reps.id = accounts.sales_rep_id
+ORDER BY rep_name;
 
 
 --Q4.27 #1 Find the sales in terms of total dollars for all orders in each year, 
