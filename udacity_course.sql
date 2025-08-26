@@ -415,8 +415,8 @@ SELECT a.name,
 FROM accounts a
 JOIN orders o
 ON a.id = o.account_id
-GROUP BY a.name, standard_qty, poster_qty, gloss_qty
-
+GROUP BY a.name
+     
 --4.17 #2 For each account, determine the average amount spent per order on each paper type. Your result should have 
 --four columns - one for the account name and one for the average amount spent on each paper type.
 SELECT a.name, 
@@ -426,12 +426,12 @@ SELECT a.name,
 FROM accounts a
 JOIN orders o
 ON a.id = o.account_id
-GROUP BY a.name, o.standard_amt_usd, o.poster_amt_usd, o.gloss_amt_usd;
+GROUP BY a.name
 
 --4.17 #3 Determine the number of times a particular channel was used in the web_events table for each sales rep. 
 --Your final table should have three columns - the name of the sales rep, the channel, and the number of occurrences. 
 --Order your table with the highest number of occurrences first.
-SELECT sales_reps.name, w.channel, COUNT(w.occurred_at) AS number_of_occurrences
+SELECT sales_reps.name, w.channel, COUNT(*) AS number_of_occurrences
 FROM web_events w
 JOIN accounts a
 ON a.id = w.account_id
