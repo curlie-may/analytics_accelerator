@@ -470,15 +470,126 @@ JOIN sales_reps
 ON sales_reps.id = accounts.sales_rep_id
 ORDER BY rep_name;
 
+--4.23 #1 How many of the sales reps have more than 5 accounts that they manage?
+SELECT s.name AS s_name, COUNT(a.name) AS a_number
+FROM sales_reps s
+JOIN accounts a
+ON s.id = a.sales_rep_id
+GROUP BY s.name
+HAVING COUNT(a.name) > 5
+
+--4.23 #2 How many accounts have more than 20 orders? (ans 120)
+-- Use account id AND account name in case account name isn't unique  
+SELECT a.id, a.name, COUNT(*) num_orders
+FROM accounts a
+JOIN orders o
+ON a.id = o.account_id
+GROUP BY a.id, a.name
+HAVING COUNT(*) > 20
+ORDER BY num_orders;
+
+--4.23 #3 Which account has the most orders?
+SELECT a.id, a.name, COUNT(*) AS num_orders  
+FROM accounts a
+JOIN orders o
+ON a.id = o.account_id
+GROUP BY a.name, a.id
+ORDER BY num_orders DESC
+LIMIT 1;
+
+--4.23 #4 Which accounts spent more than 30,000 usd total across all orders?
+SELECT a.id, a.name, SUM(o.total_amt_usd) 
+FROM accounts a
+JOIN orders o
+ON a.id = o.account_id
+GROUP BY a.name, a.id
+HAVING SUM(o.total_amt_usd)  > 30000;
+
+--4.23 #5 Which accounts spent less than 1,000 usd total across all orders?
+SELECT a.id, a.name, SUM(o.total_amt_usd)
+FROM accounts a
+JOIN orders o
+ON a.id = o.account_id
+GROUP BY a.name, a.id
+HAVING SUM(o.total_amt_usd)  < 1000
+
+--4.23 #6 Which account has spent the most with us?
+SELECT a.id, a.name, SUM(o.total_amt_usd) AS amt_total
+FROM accounts a
+JOIN orders o
+ON a.id = o.account_id
+GROUP BY a.name, a.id
+ORDER BY amt_total  DESC
+LIMIT 1;
+
+--4.23 #7 Which account has spent the least with us?
+SELECT a.id, a.name, SUM(o.total_amt_usd) AS amt_total
+FROM accounts a
+JOIN orders o
+ON a.id = o.account_id
+GROUP BY a.name, a.id
+ORDER BY amt_total  
+LIMIT 1;
+
+--4.23 #8 Which accounts used facebook as a channel to contact customers more than 6 times?
+SELECT a.id, a.name, w.channel, COUNT(*)
+FROM accounts a
+JOIN web_events w
+ON a.id = w.account_id
+WHERE w.channel = 'facebook'
+GROUP BY a.id, a.name, w.channel
+HAVING COUNT(*) > 6
+ORDER BY COUNT(*);
+
+--4.23 #9 Which account used facebook most as a channel? 
+SELECT a.id, a.name, w.channel, COUNT(*)
+FROM accounts a
+JOIN web_events w
+ON a.id = w.account_id
+WHERE w.channel = 'facebook'
+GROUP BY a.id, a.name, w.channel
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+--4.23 #10 Which channel was most frequently used by MOST accounts?
+SELECT w.channel, COUNT(*) AS channel_count
+FROM accounts a
+JOIN web_events w
+  ON a.id = w.account_id
+GROUP BY w.channel
+ORDER BY channel_count DESC
+LIMIT 1;
+--Udacity answer below...because the question is used by MOST accounts then can go with TOP 10 channels, not exact. ----
+SELECT a.id, a.name, w.channel, COUNT(*) use_of_channel
+FROM accounts a
+JOIN web_events w
+ON a.id = w.account_id
+GROUP BY a.id, a.name, w.channel
+ORDER BY use_of_channel DESC
+LIMIT 10;
+
 
 --Q4.27 #1 Find the sales in terms of total dollars for all orders in each year, 
 --ordered from greatest to least. Do you notice any trends in the yearly sales totals?
+SELECT DATE_PART('year', occurred_at) AS year_part, SUM(total_amt_usd) 
+FROM orders
+GROUP BY year_part
+ORDER BY SUM(total_amt_usd) DESC;
+--NOTE: Yearly totals show that 2013 and 2017 have much smaller totals than all other years. 
+--That's because 2013 and 2017 only have ONE MONTH of data in the table for the years 2013 and 2017. 
 
 --Q4.27 #2 Which month did Parch & Posey have the greatest sales in terms of total dollars? 
 --Are all months evenly represented by the dataset?
+--Remember from Q 4.27 years 2013 and 2017 only have ONE MONTH of data represented.
+SELECT DATE_PART('month', occurred_at) AS month_part, SUM(total_amt_usd) 
+FROM orders
+WHERE occurred_at BETWEEN '2014-01-01' AND '2017-01-01'
+GROUP BY month_part
+ORDER BY SUM(total_amt_usd) DESC;
 
 --Q4.27 #3 Which year did Parch & Posey have the greatest sales in terms of total number of orders? 
 --Are all years evenly represented by the dataset?  
+
 
 --Q4.27 #4 Which month did Parch & Posey have the greatest sales in terms of total number of orders? 
 --Are all months evenly represented by the dataset?
