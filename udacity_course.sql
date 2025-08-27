@@ -626,8 +626,82 @@ ORDER BY SUM(total_amt_usd) DESC;
 --in your final table. You might see a few upset sales people by this criteria!
 
 
+--SQL BOLT Problems
+--#3 Find all the Toy Story movies
+SELECT Title 
+FROM Movies
+WHERE Title LIKE 'Toy Story%';
 
+--#3 Find all the movies directed by John Lassete
+SELECT Title
+FROM Movies
+WHERE Director = 'John Lasseter';
 
+--#3 Find all the WALL-* movies
+SELECT Title 
+FROM Movies
+WHERE Title LIKE 'WALL-%';
 
+--#4 List all directors of Pixar movies (alphabetically), without duplicates 
+SELECT DISTINCT Director 
+FROM movies
+ORDER BY Director;
 
+--#4List the last four Pixar movies released (ordered from most recent to least) 
+SELECT Title, year  
+FROM movies
+ORDER BY year DESC
+LIMIT 4;
 
+--#4 List the first five Pixar movies sorted alphabetically
+SELECT Title
+FROM movies
+ORDER BY Title 
+LIMIT 5;
+
+--#4 USE OFFSET!!:  List the next five Pixar movies sorted alphabetically 
+SELECT Title
+FROM movies
+ORDER BY Title 
+LIMIT 5 OFFSET 5;
+
+--#6 Show the sales numbers for each movie that did better internationally rather than domestically
+SELECT Title, International_sales AS i_sales, Domestic_sales AS d_sales 
+FROM movies m
+JOIN Boxoffice b
+ON m.id = b.Movie_id
+WHERE i_sales > d_sales;
+
+--#7 Find the list of all buildings that have employees
+--NOTE:  SQL BOLT allows you to only list Buidling_name in GROUP BY!!
+--Some databases (like MySQL in “loose mode”) allow this, and they’ll just pick an arbitrary value of e.Name from each group.
+--That’s not standard, and results are non-deterministic (it might not be the same row each time).
+SELECT b.Building_name, e.Name
+FROM Buildings b
+JOIN Employees e
+ON e.Building = b.Building_name
+GROUP BY Building_name;
+--Better:  
+SELECT b.Building_name, e.Name
+FROM Buildings b
+JOIN Employees e
+ON e.Building = b.Building_name
+GROUP BY b.Building_name, e.Name;
+
+--#7 List all buildings and the distinct employee roles in each building (including empty buildings)
+SELECT DISTINCT b.Building_name, e.Role
+FROM Buildings b
+LEFT JOIN  Employees e
+ON e.Building = b.Building_name
+
+-- #8  Find the name and role of all employees who have not been assigned to a building 
+SELECT Name, Role, Building
+FROM Employees 
+WHERE Name IS NOT NULL AND Building IS NULL ;
+
+-- #8 Find the names of the buildings that hold no employees 
+SELECT b.Building_name, e.Name
+FROM Buildings b
+LEFT JOIN Employees e
+ON e.Building = b.Building_name
+WHERE e.Name IS NULL;
