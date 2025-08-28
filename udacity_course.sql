@@ -769,18 +769,18 @@ ORDER BY total_Dom_Int_Sales;
 --BIG QUERY exercises!!
 --Warm Up 1
 --1) What is the earliest year of purchase?
-/*
 SELECT MIN(year)
 FROM `prework.sales`
+/*
 Answer:  2011
 */
 --************
 --2) What is the average customer age per year? Order the years in ascending order.
-/*
 SELECT year, ROUND(AVG(Customer_Age)) AS year_average
 FROM `prework.sales`
 GROUP BY year
 ORDER BY year;
+/*
 Answer:  
 year	year_average
 2011	34.0
@@ -792,10 +792,11 @@ year	year_average
 */
 --****************
 --3) Return all clothing purchases from September 2015 where the cost was at least $70.
-/*
+
 SELECT Product, product_category, month, year, cost
 FROM `prework.sales`
 WHERE Product_Category LIKE 'Clothing' AND month = 'September' AND year = 2015 AND  COST >= 70;
+/*
 Answer:  
 Total = 553 items (below is first 3 items)
 Product	product_category	month	year	cost
@@ -805,10 +806,10 @@ AWC Logo Cap	Clothing	September	2015	175
 */
 --****************
 --4) What are all the different types of product categories that were sold from 2014 to 2016 in France?
-/*
-SELECT DISTINCT(product_category)
+SELECT DISTINCT product_category
 FROM `prework.sales`
 WHERE Country = 'France' AND year BETWEEN 2014 AND 2016
+/*
 Answer:
 product_category
 Accessories
@@ -817,8 +818,27 @@ Bikes
 */
 --******************
 --5) Within each product category and age group (combined), what is the average order quantity and total profit?
+SELECT DISTINCT product_category,  
+                age_group, 
+                 ROUND(AVG(order_quantity),0) AS avg_order_quantity,  
+                SUM(profit) AS total_profit
+FROM `prework.sales`
+GROUP BY Product_Category, age_group;
 /*
-Answer:  
+Answer: 12 items
+product_category	age_group	               avg_order_quantity	total_profit
+Accessories	     Youth (<25)	          15.0	               1255267
+Accessories	     Adults (35-64)	          15.0	               4611837
+Accessories	     Young Adults (25-34)	15.0	               2921240
+Accessories	     Seniors (64+)	          15.0	               74033
+Clothing	          Young Adults (25-34)	15.0	               884614
+Clothing	          Adults (35-64)	          15.0	               1527164
+Clothing	          Youth (<25)	          14.0	               410079
+Clothing	          Seniors (64+)	          14.0	               17590
+Bikes	          Young Adults (25-34)	1.0	               7580907
+Bikes	          Youth (<25)	          1.0	               2709246
+Bikes	          Adults (35-64)	          1.0	               10182581
+Bikes	          Seniors (64+)	          1.0	               46542
 */
 
 --Warm Up 2
