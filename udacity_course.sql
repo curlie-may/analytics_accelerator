@@ -705,3 +705,64 @@ FROM Buildings b
 LEFT JOIN Employees e
 ON e.Building = b.Building_name
 WHERE e.Name IS NULL;
+
+--#9 List all movies and their combined sales in millions of dollars
+SELECT m.Title, 
+(b.Domestic_sales + b.International_sales)/1000000 AS sales_total
+FROM Boxoffice b
+JOIN Movies m
+ON b.Movie_id = m.Id;
+
+--#9 List all movies and their ratings in percent
+SELECT title, rating * 10 AS rating_percent
+FROM movies
+  JOIN boxoffice
+    ON movies.id = boxoffice.movie_id;
+
+--#9 FOR EVEN NUMBER: List all movies that were released on even number years 
+SELECT title 
+FROM movies
+WHERE year %2 = 0;   --%2 = 0 indicates it's an EVEN number
+
+--#10 Find the longest time that an employee has been at the studio 
+SELECT *, MAX(Years_employed) 
+FROM employees;
+
+--#10For each role, find the average number of years employed by employees in that role
+SELECT Role,  AVG(Years_employed) 
+FROM employees
+GROUP BY Role;
+
+--#10 Find the total number of employee years worked in each building 
+SELECT Building, SUM(Years_employed)
+FROM employees
+GROUP BY Building;
+
+-- #11 Find the number of Employees of each role in the studio
+SELECT DISTINCT Role, 
+        COUNT(*) AS Employees_each_role
+FROM Employees
+GROUP BY Role;
+
+--# 11 Find the total number of years employed by all Engineers 
+SELECT SUM(Years_employed)
+FROM Employees
+WHERE Role = 'Engineer';
+
+-- #12 Find the number of movies each director has directed 
+SELECT Director, COUNT(Title) AS number_of_movies
+FROM Movies
+GROUP BY Director;
+
+-- #12 Find the total domestic and international sales that can be attributed to each director 
+-- NOTE: SUM → needed because directors can have multiple movies. + → needed because each movie 
+--has two different columns you want to combine.
+-- SUM(Domestic_sales + International_sales) = (300+400) + (250+350) = 1,300
+SELECT Director, 
+       SUM(Domestic_sales + International_sales) AS total_Dom_Int_Sales
+FROM Movies m
+JOIN Boxoffice b
+ON b.Movie_id = m.Id
+GROUP BY Director
+ORDER BY total_Dom_Int_Sales;
+
