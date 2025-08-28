@@ -766,3 +766,28 @@ ON b.Movie_id = m.Id
 GROUP BY Director
 ORDER BY total_Dom_Int_Sales;
 
+--BIG QUERY exercises!!
+--Warm Up 1
+--1) What is the earliest year of purchase?
+
+--2) What is the average customer age per year? Order the years in ascending order.
+
+--3) Return all clothing purchases from September 2015 where the cost was at least $70.
+
+--4) What are all the different types of product categories that were sold from 2014 to 2016 in France?
+
+--5) Within each product category and age group (combined), what is the average order quantity and total profit?
+--
+--Warm Up 2
+--1) Which product category has the highest number of orders among 31-year olds? Return only the top product category.
+
+--2) Of female customers in the U.S. who purchased bike-related products in 2015, what was the average revenue?
+
+--3) Categorize all purchases into bike vs. non-bike related purchases. How many purchases were there in each group among male customers in 2016?
+
+--4) Among people who purchased socks or caps (use sub_category), what was the average profit earned per country per year, ordered by 
+--highest average profit to lowest average profit?
+
+--5) For male customers who purchased the AWC Logo Cap (use product), use a window function to order the purchase dates 
+--from oldest to most recent within each gender.
+
