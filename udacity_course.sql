@@ -769,25 +769,82 @@ ORDER BY total_Dom_Int_Sales;
 --BIG QUERY exercises!!
 --Warm Up 1
 --1) What is the earliest year of purchase?
-
+/*
+SELECT MIN(year)
+FROM `prework.sales`
+Answer:  2011
+*/
+--************
 --2) What is the average customer age per year? Order the years in ascending order.
-
+/*
+SELECT year, ROUND(AVG(Customer_Age)) AS year_average
+FROM `prework.sales`
+GROUP BY year
+ORDER BY year;
+Answer:  
+year	year_average
+2011	34.0
+2012	34.0
+2013	35.0
+2014	37.0
+2015	35.0
+2016	37.0
+*/
+--****************
 --3) Return all clothing purchases from September 2015 where the cost was at least $70.
-
+/*
+SELECT Product, product_category, month, year, cost
+FROM `prework.sales`
+WHERE Product_Category LIKE 'Clothing' AND month = 'September' AND year = 2015 AND  COST >= 70;
+Answer:  
+Total = 553 items (below is first 3 items)
+Product	product_category	month	year	cost
+AWC Logo Cap	Clothing	September	2015	182
+AWC Logo Cap	Clothing	September	2015	105
+AWC Logo Cap	Clothing	September	2015	175
+*/
+--****************
 --4) What are all the different types of product categories that were sold from 2014 to 2016 in France?
-
+/*
+SELECT DISTINCT(product_category)
+FROM `prework.sales`
+WHERE Country = 'France' AND year BETWEEN 2014 AND 2016
+Answer:
+product_category
+Accessories
+Clothing
+Bikes
+*/
+--******************
 --5) Within each product category and age group (combined), what is the average order quantity and total profit?
---
+/*
+Answer:  
+*/
+
 --Warm Up 2
 --1) Which product category has the highest number of orders among 31-year olds? Return only the top product category.
+/*
+Answer:  
+*/
 
 --2) Of female customers in the U.S. who purchased bike-related products in 2015, what was the average revenue?
+/*
+Answer:  
+*/
 
 --3) Categorize all purchases into bike vs. non-bike related purchases. How many purchases were there in each group among male customers in 2016?
+/*
+Answer:  
+*/
 
 --4) Among people who purchased socks or caps (use sub_category), what was the average profit earned per country per year, ordered by 
 --highest average profit to lowest average profit?
+/*
+Answer:  
+*/
 
 --5) For male customers who purchased the AWC Logo Cap (use product), use a window function to order the purchase dates 
 --from oldest to most recent within each gender.
-
+/*
+Answer:  
+*/
