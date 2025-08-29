@@ -885,13 +885,6 @@ FROM prework.sales
 WHERE Sub_category IN ('Caps', 'Socks')
 GROUP by country, year
 ORDER by avg_profit DESC;
-/*
-Answer:  48 entries as outputs.  Below are 3 entries
-Sub_category	country	year	     avg_profit
-Socks	     Canada	2013	     123.41
-Socks	     Canada	2015	     122.46
-Socks	     Germany	2016	     100.61
-*/
 
 --5) For male customers who purchased the AWC Logo Cap (use product), use a window function to order the purchase dates 
 --from oldest to most recent within each gender.
@@ -899,10 +892,3 @@ select *,
 	row_number() over (partition by customer_gender order by date asc ) as date_rank
 from prework.sales
 where customer_gender = 'M' and product = 'AWC Logo Cap';
-/*
-Answer: 728 entries.  First 3 shown below.
-Customer_gender	product	     date
-M	               AWC Logo Cap	2016-07-31
-M	               AWC Logo Cap	2016-07-30
-M	               AWC Logo Cap	2016-07-29
-*/
