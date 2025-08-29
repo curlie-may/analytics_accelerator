@@ -899,6 +899,11 @@ Socks	     Germany	2016	     100.61
 
 --5) For male customers who purchased the AWC Logo Cap (use product), use a window function to order the purchase dates 
 --from oldest to most recent within each gender.
+SELECT Customer_gender, product, date
+FROM prework.sales
+WHERE Customer_gender = 'M' AND product LIKE 'AWC%'  
+GROUP BY Customer_gender, product, date  -- GROUP BY prevents redundent date entries  
+ORDER BY date DESC
 /*
 Answer:  
 */
