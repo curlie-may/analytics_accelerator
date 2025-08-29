@@ -843,24 +843,58 @@ Bikes	          Seniors (64+)	          1.0	               46542
 
 --Warm Up 2
 --1) Which product category has the highest number of orders among 31-year olds? Return only the top product category.
+SELECT MAX(Product_Category) 
+FROM 'prework.sales'
+WHERE Customer_Age = 31; 
 /*
 Answer:  
+Clothing
 */
 
 --2) Of female customers in the U.S. who purchased bike-related products in 2015, what was the average revenue?
+SELECT Customer_gender, year, product, ROUND(AVG(revenue), 2) AS Avg_revenue
+FROM prework.sales
+WHERE Customer_gender = 'F' AND Year = 2015 AND (Product_Category LIKE 'Bike%' OR Sub_category LIKE '%Bike%' OR PRODUCT LIKE '%Bike%')
+GROUP BY Customer_gender, Year, product;
 /*
 Answer:  
+900 entries as output.  First 3 entries are below:
+Customer_gender	year	product	               Avg_revenue
+F	               2015	Hitch Rack - 4-Bike	     825.85
+F	               2015	All-Purpose Bike Stand	675.01
+F	               2015	Bike Wash - Dissolver	116.47
+
 */
 
 --3) Categorize all purchases into bike vs. non-bike related purchases. How many purchases were there in each group among male customers in 2016?
+SELECT Customer_gender, Product, year, Count(*) AS number_purchased
+FROM prework.sales
+WHERE Customer_gender = 'M' AND year = 2015 AND (Product_category LIKE '%Bike%' OR Product_category NOT LIKE '%Bike%')  
+GROUP BY Customer_gender, Product, year
+ORDER BY number_purchased DESC;
 /*
 Answer:  
+130 entries. First 3 entries below when ORDER BY number_purchased
+Customer_gender	Product	               year	     number_purchased
+M	               Patch Kit/8 Patches	     2015	     1144
+M	               Water Bottle - 30 oz.	2015	     1127
+M	               Mountain Tire Tube	     2015	     698
 */
 
 --4) Among people who purchased socks or caps (use sub_category), what was the average profit earned per country per year, ordered by 
 --highest average profit to lowest average profit?
+SELECT Sub_category, country, year, ROUND(AVG(profit),2) AS avg_profit
+FROM prework.sales
+WHERE Sub_category LIKE '%ock%' OR Sub_category LIKE '%ap%'
+GROUP by Sub_category, country, year
+ORDER by avg_profit DESC;
 /*
 Answer:  
+48 entries as outputs.  Below are 3 entries
+Sub_category	country	year	     avg_profit
+Socks	     Canada	2013	     123.41
+Socks	     Canada	2015	     122.46
+Socks	     Germany	2016	     100.61
 */
 
 --5) For male customers who purchased the AWC Logo Cap (use product), use a window function to order the purchase dates 
