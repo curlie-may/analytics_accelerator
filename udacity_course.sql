@@ -778,8 +778,8 @@ Answer:  2011
 --2) What is the average customer age per year? Order the years in ascending order.
 SELECT year, ROUND(AVG(Customer_Age)) AS year_average
 FROM `prework.sales`
-GROUP BY year
-ORDER BY year;
+GROUP BY year  --or group by 1
+ORDER BY year; --or order by 1
 /*
 Answer:  
 year	year_average
@@ -823,7 +823,7 @@ SELECT DISTINCT product_category,
                  ROUND(AVG(order_quantity),0) AS avg_order_quantity,  
                 SUM(profit) AS total_profit
 FROM `prework.sales`
-GROUP BY Product_Category, age_group;
+GROUP BY Product_Category, age_group;  --or GROUP BY 1, 2
 /*
 Answer: 12 items
 product_category	age_group	               avg_order_quantity	total_profit
@@ -843,54 +843,50 @@ Bikes	          Seniors (64+)	          1.0	               46542
 
 --Warm Up 2
 --1) Which product category has the highest number of orders among 31-year olds? Return only the top product category.
-SELECT MAX(Product_Category) 
-FROM 'prework.sales'
-WHERE Customer_Age = 31; 
+SELECT Product_Category, SUM(Order_Quantity)
+FROM prework.sales
+WHERE Customer_Age = 31
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 1; 
 /*
-Answer:  
-Clothing
+Answer:  Clothing
 */
 
 --2) Of female customers in the U.S. who purchased bike-related products in 2015, what was the average revenue?
-SELECT Customer_gender, year, product, ROUND(AVG(revenue), 2) AS Avg_revenue
+SELECT AVG(revenue) AS Avg_revenue
 FROM prework.sales
-WHERE Customer_gender = 'F' AND Year = 2015 AND (Product_Category LIKE 'Bike%' OR Sub_category LIKE '%Bike%' OR PRODUCT LIKE '%Bike%')
-GROUP BY Customer_gender, Year, product;
+WHERE Customer_gender = 'F' AND Year = 2015 AND country = 'United States' 
+     AND Product_Category LIKE '%Bike%';
 /*
-Answer:  
-900 entries as output.  First 3 entries are below:
-Customer_gender	year	product	               Avg_revenue
-F	               2015	Hitch Rack - 4-Bike	     825.85
-F	               2015	All-Purpose Bike Stand	675.01
-F	               2015	Bike Wash - Dissolver	116.47
-
+Answer:  2424.603.....
 */
 
 --3) Categorize all purchases into bike vs. non-bike related purchases. How many purchases were there in each group among male customers in 2016?
-SELECT Customer_gender, Product, year, Count(*) AS number_purchased
+SELECT 
+  CASE 
+    WHEN Product LIKE '%Bike%' THEN 'Bike'  --This is the Curriculum answer, but I disagree, I htink you need Product_Category too
+    ELSE 'Non-Bike'
+  END AS category,
+  count(*) AS count
 FROM prework.sales
-WHERE Customer_gender = 'M' AND year = 2015 AND (Product_category LIKE '%Bike%' OR Product_category NOT LIKE '%Bike%')  
-GROUP BY Customer_gender, Product, year
-ORDER BY number_purchased DESC;
+WHERE Customer_gender = 'M'
+  AND year = 2016
+GROUP BY category;
 /*
-Answer:  
-130 entries. First 3 entries below when ORDER BY number_purchased
-Customer_gender	Product	               year	     number_purchased
-M	               Patch Kit/8 Patches	     2015	     1144
-M	               Water Bottle - 30 oz.	2015	     1127
-M	               Mountain Tire Tube	     2015	     698
+Bike: 411
+Non-Bike:  15120
 */
 
 --4) Among people who purchased socks or caps (use sub_category), what was the average profit earned per country per year, ordered by 
 --highest average profit to lowest average profit?
-SELECT Sub_category, country, year, ROUND(AVG(profit),2) AS avg_profit
+SELECT country, year, AVG(profit) AS avg_profit
 FROM prework.sales
-WHERE Sub_category LIKE '%ock%' OR Sub_category LIKE '%ap%'
-GROUP by Sub_category, country, year
+WHERE Sub_category IN ('Caps', 'Socks')
+GROUP by country, year
 ORDER by avg_profit DESC;
 /*
-Answer:  
-48 entries as outputs.  Below are 3 entries
+Answer:  48 entries as outputs.  Below are 3 entries
 Sub_category	country	year	     avg_profit
 Socks	     Canada	2013	     123.41
 Socks	     Canada	2015	     122.46
@@ -899,11 +895,14 @@ Socks	     Germany	2016	     100.61
 
 --5) For male customers who purchased the AWC Logo Cap (use product), use a window function to order the purchase dates 
 --from oldest to most recent within each gender.
-SELECT Customer_gender, product, date
-FROM prework.sales
-WHERE Customer_gender = 'M' AND product LIKE 'AWC%'  
-GROUP BY Customer_gender, product, date  -- GROUP BY prevents redundent date entries  
-ORDER BY date DESC
+select *, 
+	row_number() over (partition by customer_gender order by date asc ) as date_rank
+from prework.sales
+where customer_gender = 'M' and product = 'AWC Logo Cap';
 /*
-Answer:  
+Answer: 728 entries.  First 3 shown below.
+Customer_gender	product	     date
+M	               AWC Logo Cap	2016-07-31
+M	               AWC Logo Cap	2016-07-30
+M	               AWC Logo Cap	2016-07-29
 */
