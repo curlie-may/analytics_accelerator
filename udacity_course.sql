@@ -626,6 +626,27 @@ ORDER BY SUM(total_amt_usd) DESC;
 --in your final table. You might see a few upset sales people by this criteria!
 
 
+--Q5.3 Show the average number of events a day for each channel.
+SELECT channel, AVG(events) AS average_events
+FROM (SELECT DATE_TRUNC('day',occurred_at) AS day,
+                channel, COUNT(*) as events
+         FROM web_events 
+         GROUP BY 1,2) sub
+GROUP BY channel
+ORDER BY 2 DESC;
+
+--Q5.3 What was the month/year combo for the first order placed?
+SELECT MIN(DATE_TRUNC('month', occurred_at))
+FROM orders;
+
+--Q5.3 The average amount of standard paper sold on the first month that any order was placed in the orders table (in terms of quantity).
+SELECT AVG(standard_qty), MIN(DATE_TRUNC('month', occurred_at))           FROM orders
+
+
+
+
+
+
 --SQL BOLT Problems
 --#3 Find all the Toy Story movies
 SELECT Title 
@@ -892,3 +913,4 @@ select *,
 	row_number() over (partition by customer_gender order by date asc ) as date_rank
 from prework.sales
 where customer_gender = 'M' and product = 'AWC Logo Cap';
+
