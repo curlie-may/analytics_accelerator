@@ -640,11 +640,21 @@ SELECT MIN(DATE_TRUNC('month', occurred_at))
 FROM orders;
 
 --Q5.3 The average amount of standard paper sold on the first month that any order was placed in the orders table (in terms of quantity).
-SELECT AVG(standard_qty), MIN(DATE_TRUNC('month', occurred_at))           FROM orders
+--Ans 268
+SELECT AVG(standard_qty) 
+FROM orders   
+WHERE DATE_TRUNC('month', occurred_at) = (
+       SELECT MIN(DATE_TRUNC('month', occurred_at))
+       FROM orders
+);                            
 
-
-
-
+--Q5,3 The total amount spent on all orders on the first month that any order was placed in the orders table (in terms of usd).
+SELECT SUM(standard_amt_usd)+SUM(gloss_amt_usd)+SUM(poster_amt_usd)
+FROM orders   
+WHERE DATE_TRUNC('month', occurred_at) = (
+       SELECT MIN(DATE_TRUNC('month', occurred_at))
+       FROM orders
+);
 
 
 --SQL BOLT Problems
