@@ -658,6 +658,7 @@ WHERE DATE_TRUNC('month', occurred_at) = (
 
 
 --Q5.9 My question:  Find rep_names that occur more than once, COUNT(*) > 1, to see if any reps cover more than one region. 
+--Answer:  No. A single rep covers only one region. 
 SELECT s.name AS s_rep_name, 
        r.name AS region_name
 FROM sales_reps s
@@ -667,13 +668,13 @@ GROUP BY s.name, r.name
 HAVING COUNT(*) > 1;
 
 --Q5.9 #1 Provide the name of the sales_rep in each region with the largest amount of total_amt_usd sales.
-SELECT sales_reps.name,
-	   subquery1.region_name, 
-	   subquery1.max_total_amt
+SELECT t3.s_rep_name,
+	   t3.region_name, 
+	   t3.total_amt
 FROM
 	(
-	SELECT subquery1.region_name, 
-	       MAX(subquery1.total_amt) AS max_total_amt
+	SELECT t1.region_name, 
+	       MAX(t1.total_amt) AS max_total_amt
 	FROM (
 		  SELECT s.name AS s_rep_name, 
 		         r.name AS region_name,
@@ -683,11 +684,22 @@ FROM
 		  JOIN accounts a ON a.sales_rep_id = s.id  
 		  JOIN orders o ON o.account_id = a.id
           GROUP BY s_rep_name, region_name
-		) AS subquery1
-	GROUP BY subquery1.region_name
-	) AS subquery2
-JOIN sales_rep 
-ON sales_rep.id = subquery2. 
+		) AS t1
+	GROUP BY t1.region_name
+	) AS t2
+JOIN (
+	 SELECT s.name AS s_rep_name, 
+		         r.name AS region_name,
+		         SUM(o.total_amt_usd) AS total_amt
+		  FROM region r 
+		  JOIN sales_reps s ON r.id = s.region_id  
+		  JOIN accounts a ON a.sales_rep_id = s.id  
+		  JOIN orders o ON o.account_id = a.id
+          GROUP BY s_rep_name, region_name
+		  ORDER BY total_amt DESC
+	  ) AS t3
+ON t3.region_name = t2.region_name AND t3.total_amt = t2.max_total_amt
+
 	/*************************
 SELECT subquery.region_name, 
 	   MAX(subquery.total_amt) AS max_total_amt
