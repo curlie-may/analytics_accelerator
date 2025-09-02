@@ -635,11 +635,11 @@ FROM (SELECT DATE_TRUNC('day',occurred_at) AS day,
 GROUP BY channel
 ORDER BY 2 DESC;
 
---Q5.3 What was the month/year combo for the first order placed?
+--Q5.3 #1 What was the month/year combo for the first order placed?
 SELECT MIN(DATE_TRUNC('month', occurred_at))
 FROM orders;
 
---Q5.3 The average amount of standard paper sold on the first month that any order was placed in the orders table (in terms of quantity).
+--Q5.3 #2 The average amount of standard paper sold on the first month that any order was placed in the orders table (in terms of quantity).
 --Ans 268
 SELECT AVG(standard_qty) 
 FROM orders   
@@ -648,7 +648,7 @@ WHERE DATE_TRUNC('month', occurred_at) = (
        FROM orders
 );                            
 
---Q5,3 The total amount spent on all orders on the first month that any order was placed in the orders table (in terms of usd).
+--Q5.3 #3 The total amount spent on all orders on the first month that any order was placed in the orders table (in terms of usd).
 SELECT SUM(standard_amt_usd)+SUM(gloss_amt_usd)+SUM(poster_amt_usd)
 FROM orders   
 WHERE DATE_TRUNC('month', occurred_at) = (
@@ -657,6 +657,55 @@ WHERE DATE_TRUNC('month', occurred_at) = (
 );
 
 
+--Q5.9 My question:  Find rep_names that occur more than once, COUNT(*) > 1, to see if any reps cover more than one region. 
+SELECT s.name AS s_rep_name, 
+       r.name AS region_name
+FROM sales_reps s
+JOIN region r
+ON s.region_id = r.id
+GROUP BY s.name, r.name
+HAVING COUNT(*) > 1;
+
+--Q5.9 #1 Provide the name of the sales_rep in each region with the largest amount of total_amt_usd sales.
+SELECT sales_reps.name,
+	   subquery1.region_name, 
+	   subquery1.max_total_amt
+FROM
+	(
+	SELECT subquery1.region_name, 
+	       MAX(subquery1.total_amt) AS max_total_amt
+	FROM (
+		  SELECT s.name AS s_rep_name, 
+		         r.name AS region_name,
+		         SUM(o.total_amt_usd) AS total_amt
+		  FROM region r 
+		  JOIN sales_reps s ON r.id = s.region_id  
+		  JOIN accounts a ON a.sales_rep_id = s.id  
+		  JOIN orders o ON o.account_id = a.id
+          GROUP BY s_rep_name, region_name
+		) AS subquery1
+	GROUP BY subquery1.region_name
+	) AS subquery2
+JOIN sales_rep 
+ON sales_rep.id = subquery2. 
+	/*************************
+SELECT subquery.region_name, 
+	   MAX(subquery.total_amt) AS max_total_amt
+FROM (
+  SELECT s.name AS s_rep_name, 
+       r.name AS region_name,
+       SUM(o.total_amt_usd) AS total_amt
+FROM region r 
+JOIN sales_reps s ON r.id = s.region_id  
+JOIN accounts a ON a.sales_rep_id = s.id  
+JOIN orders o ON o.account_id = a.id
+GROUP BY s_rep_name, region_name 
+) AS subquery
+GROUP BY subquery.region_name
+*/
+
+
+	
 --SQL BOLT Problems
 --#3 Find all the Toy Story movies
 SELECT Title 
