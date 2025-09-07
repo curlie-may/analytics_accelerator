@@ -25,3 +25,14 @@ WHERE skill IN ('Python', 'Tableau', 'PostgreSQL')
 GROUP BY candidate_id
 HAVING COUNT(skill) = 3
 ORDER BY candidate_id;
+
+
+--Histogram of Tweets: Twitter SQL Interview Question
+SELECT t1.tweet_bucket, count(t1.user_id) AS user_num
+FROM (
+SELECT COUNT(tweet_id) AS tweet_bucket, user_id
+FROM tweets
+WHERE DATE_TRUNC('year', tweet_date) = '2022-01-01'
+GROUP BY user_id
+) as t1
+GROUP BY t1.tweet_bucket
