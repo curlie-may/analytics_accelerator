@@ -985,3 +985,9 @@ select *,
 from prework.sales
 where customer_gender = 'M' and product = 'AWC Logo Cap';
 
+-- EXTRACT example with date
+select avg(usd_price) as average_usd_price
+from `core.orders`
+where currency = 'USD' AND EXTRACT(YEAR from purchase_ts)  =  2019; 
+
+
