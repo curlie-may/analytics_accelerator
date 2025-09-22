@@ -11,9 +11,10 @@ Share insights and observations derived from deep engagement with the data.
 
 -- Table of contents.  
   GHopper: Company Profile
-  My Role & Contributions
+  My Role As Data Analyst
   Key Stakeholder Questions
-  Identified Customer Data Gaps 
+  Customer Data (ERD) 
+  Identified Customer Data Gaps (Remove?)
   Insights from Additional Data Analysis
   Footnotes & References
 
