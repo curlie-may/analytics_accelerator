@@ -9,7 +9,13 @@ Analyze customer data to provide clear insights into stakeholders questions.
 Identify gaps or inconsistencies in the available customer data and recommend improvements.
 Share insights and observations derived from deep engagement with the data.
 
--- Table of contents. Include footnotes and references. 
+-- Table of contents.  
+  GHopper: Company Profile
+  My Role & Contributions
+  Key Stakeholder Questions
+  Identified Customer Data Gaps 
+  Insights from Additional Data Analysis
+  Footnotes & References
 
 -- Include document revision. 
 
