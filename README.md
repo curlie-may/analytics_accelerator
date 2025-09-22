@@ -13,3 +13,5 @@ Share insights and observations derived from deep engagement with the data.
 
 -- Include document revision. 
 
+-- Company name:  GHopper (see logo)
+
