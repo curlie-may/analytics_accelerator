@@ -43,5 +43,12 @@ Ghopper is an e-commerce company founded in 2018 by two Community College gradua
     
 # How is the loyalty program performing and should we keep using it?
 Notes: To determin how the loyalty program is performing, I compared two metrics: a) the USD prices and b) number of purchases for each group. 
-1. Before analysis I removed entries where USD price is listed as $0. (Qty: 35 entries for the loyalty program and 169 entries for the non-loyalty program) 
+1. Before analysis I removed entries where USD price is listed as $0. (Qty: 158 entries out of 108095 total)
+2. And I removed entries where USD price is blank (Qty: 27 entries out of 108095)
+3. Number of Loyalty entries = 45686, number of Non-loyalty entries = 62276. Both groups have same order of magnitude entries. 
 ## I began by using a ttest to determine if the two distributions were significantly diffierent (need to check if the two distributions are normalized!!).  
+1. p-value = 0.356
+2. That means the difference in average spending between loyalty and non-loyalty customers is not statistically significant in your dataset.
+3. In other words, based on this test, you cannot conclude that the two groups spend differently — the observed difference could easily be due to random variation.
+4. It doesn’t mean the groups are exactly the same, just that the evidence isn’t strong enough to say they’re different.
+5. With p = 0.356, there’s about a 35.6% chance of seeing a difference at least this large if, in reality, the two groups truly spend the same.
