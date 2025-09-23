@@ -23,7 +23,8 @@ Share insights and observations derived from deep engagement with the data.
 
 
 
--- Company name:  GHopper (see logo)
+# Company name:  GHopper (see logo)
+Ghopper is an e-commerce company founded in 2018 by two Community College graduates.  The company began as an online site selling returned, slightly-used electronic components and equipment, mostly to hobbyists.  GHopper remains an e-commerce company selling a wider range of popular electronics and has expanded globally.  It is a data-forward company.  It continues to improve customer satisfaction by tracking customer metrics such as refund rates, loyalty program response and fulfillment times.  With the rapid rise of AI, GHopper is extending its product line to cover AI-supporting electronics.
 
   # Key Stakeholder Questions
   Analyze customer data for 2019 to 2022. Specifically, provide insights into
