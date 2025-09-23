@@ -1,7 +1,7 @@
 -- List competitors: Newegg, etc.  List competitors numbers?
 
---Customer IDs are wonky. 
-
+--Customer User_IDs are wonky. 
+--Include ERD.
 -- Prices have not increased since 2021.  Adjust for tariffs and inflation.
 
 -- Job as Data Analyst is to 1). Provide responses to stakeholders questions based on an analysis of customer data 2). Provide feedback regarding gaps in the provided customer data. 3). Provide observations that have come about from having a close relationship with the data.
