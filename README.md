@@ -26,6 +26,10 @@ Share insights and observations derived from deep engagement with the data.
 # Company name:  GHopper (see logo)
 Ghopper is an e-commerce company founded in 2018 by two Community College graduates.  The company began as an online site selling returned, slightly-used electronic components and equipment, mostly to hobbyists.  GHopper remains an e-commerce company selling a wider range of popular electronics and has expanded globally.  It is a data-forward company.  It continues to improve customer satisfaction by tracking customer metrics such as refund rates, loyalty program response and fulfillment times.  With the rapid rise of AI, GHopper is extending its product line to cover AI-supporting electronics.
 
+#  As a Data Analyst hired by GHopper, my roles are to:  1). Provide responses to stakeholders questions based on an analysis of customer data 2). Provide feedback regarding gaps in the provided customer data. 3). Provide observations that have come about from having a close relationship with the data.
+
+
+
   # Key Stakeholder Questions
   Analyze customer data for 2019 to 2022. Specifically, provide insights into
     What were the overall trends in sales during this time?
