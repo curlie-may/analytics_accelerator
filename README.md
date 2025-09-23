@@ -1,4 +1,10 @@
--- List competitors: Newegg, etc.  List competitors numbers?
+-- List competitors: Newegg, etc.  
+
+--Calculate AOV where AOV = total dollar sales / total # of sales
+--AOV gives, on average, how expensive the products were over a period of time
+--or over a certain population
+
+--Note: Be able to explain physics thesis
 
 --Customer User_IDs are wonky. 
 --Include ERD.
