@@ -50,6 +50,24 @@ group by sender_id
 order by number_of_messages DESC
 limit 2;
 
+--Cities With Completed Trades
+select users.city as users_city, count(trades.status) as trade_count   
+from trades
+join users
+on trades.user_id = users.user_id
+where status = 'Completed'
+group by users_city
+order by trade_count desc 
+limit 3;
 
-
+--Laptop vs. Mobile Viewership
+select 
+  count(case when device_type = 'laptop' then 1 end) as laptop_views,  --Note: do NOT put else 0 because ELSE 0 is counted as a NULL.   
+  count(case when device_type in ('tablet', 'phone') then 1 end) as mobile_views --if use ELSE 0 then use SUM as in next example
+from viewership
+--or another version 
+select 
+  SUM(case when device_type = 'laptop' then 1 else 0 end) as laptop_views,  
+  SUM(case when device_type in ('tablet', 'phone') then 1 else 0 end) as mobile_views
+from viewership;
 
