@@ -1,24 +1,4 @@
---LinkedIn SQL:  Given a table of candidates and their skills, you're tasked with finding the candidates best suited for an open Data Science job. 
---You want to find candidates who are proficient in Python, Tableau, and PostgreSQL. Write a query to list the candidates who possess 
---all of the required skills for the job. Sort the output by candidate ID in ascending order.
---Assumption: There are no duplicates in the candidates table.
---**********
-/*
-candidates Table:
-Column Name	Type
-candidate_id	integer
-skill	varchar
-candidates Example Input:
-candidate_id	skill
-123	Python
-123	Tableau
-123	PostgreSQL
-234	R
-234	PowerBI
-234	SQL Server
-345	Python
-345	Tableau
-*/
+--Data Science Skills
 SELECT candidate_id
 FROM candidates
 WHERE skill IN ('Python', 'Tableau', 'PostgreSQL') 
@@ -37,11 +17,13 @@ GROUP BY user_id
 ) AS t1
 GROUP BY t1.tweet_bucket
 
+  
 --Unfinished Parts: Tesla SQL Interview Question
 SELECT part, assembly_step
 FROM parts_assembly
 WHERE finish_date IS Null AND assembly_step != 1
 
+  
 --Teams Power Users Microsoft SQL Interview Question
 select  sender_id, count(content) as number_of_messages
 from messages
@@ -49,6 +31,7 @@ where extract (year from sent_date) = '2022' and extract (month from sent_date) 
 group by sender_id
 order by number_of_messages DESC
 limit 2;
+
 
 --Cities With Completed Trades
 select users.city as users_city, count(trades.status) as trade_count   
@@ -59,6 +42,7 @@ where status = 'Completed'
 group by users_city
 order by trade_count desc 
 limit 3;
+
 
 --Laptop vs. Mobile Viewership
 select 
@@ -71,3 +55,11 @@ select
   SUM(case when device_type in ('tablet', 'phone') then 1 else 0 end) as mobile_views
 from viewership;
 
+
+--Average Post Hiatus (Part 1)
+select user_id, 
+       date(max(post_date)) - date(min(post_date)) as number_of_days  --date () removes the time-stamp from the 'post_id' 
+from posts
+where extract (year from post_date) = 2021 
+group by user_id
+having count(user_id) >= 2;
