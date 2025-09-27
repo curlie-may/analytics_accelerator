@@ -63,3 +63,9 @@ from posts
 where extract (year from post_date) = 2021 
 group by user_id
 having count(user_id) >= 2;
+
+--Average Review Ratings
+select extract(month from submit_date) as mth, product_id as product, round(avg(stars), 2) as avg_stars
+from reviews
+group by product_id, mth
+order by mth
