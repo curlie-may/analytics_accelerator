@@ -15,13 +15,13 @@ FROM tweets
 WHERE DATE_TRUNC('year', tweet_date) = '2022-01-01'
 GROUP BY user_id
 ) AS t1
-GROUP BY t1.tweet_bucket
+GROUP BY t1.tweet_bucket;
 
   
 --Unfinished Parts: Tesla SQL Interview Question
 SELECT part, assembly_step
 FROM parts_assembly
-WHERE finish_date IS Null AND assembly_step != 1
+WHERE finish_date IS Null AND assembly_step != 1;
 
   
 --Teams Power Users Microsoft SQL Interview Question
@@ -68,10 +68,19 @@ having count(user_id) >= 2;
 select extract(month from submit_date) as mth, product_id as product, round(avg(stars), 2) as avg_stars
 from reviews
 group by product_id, mth
-order by mth
+order by mth;
+
+--Patient Support Analysis (Part 1)
+select count(*) as policy_holder_count
+from (
+  select count(policy_holder_id) as policy_holder_account
+  from callers
+  group by policy_holder_id
+  having count(case_id) >= 3
+) t;
 
 -- Final Account Balance  
 select account_id, 
        sum(case when transaction_type = 'Deposit' then amount else -amount end) as final_balance
 from transactions
-group by account_id
+group by account_id;
