@@ -69,3 +69,9 @@ select extract(month from submit_date) as mth, product_id as product, round(avg(
 from reviews
 group by product_id, mth
 order by mth
+
+-- Final Account Balance  
+select account_id, 
+       sum(case when transaction_type = 'Deposit' then amount else -amount end) as final_balance
+from transactions
+group by account_id
