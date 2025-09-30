@@ -17,7 +17,7 @@ Ghopper is an e-commerce company founded in 2018 by two Community College gradua
 
  ### First Steps - clean the data
  Before addressing the Stakeholder's questions, I cleaned the Excel data and created a worksheet listing the data gaps [cleaned Excel customer data].  
- The data cleaning process consists of the following steps:
+ The process consists of the following steps:
    - In Excel, I preserved the raw column data, I copied the data to in separate columns, identified as "_cleaned", I filtered the data and removed blank enteries.    This included  by removing  
     
 
