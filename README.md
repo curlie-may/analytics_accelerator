@@ -1,4 +1,4 @@
-<img src="GHopper_logo.jpg" alt="GHopper_logo" width="300"/>
+<img src="images/GHopper_logo.jpg" alt="GHopper_logo" width="300"/>
 
 ###  Company Background
 Ghopper is an e-commerce company founded in 2018 by two Community College graduates.  The company began as an online site selling returned, slightly-used electronic components and equipment, mostly to hobbyists.  GHopper remains an e-commerce company selling a wider range of popular electronics and has expanded globally.  It is a data-forward company that continues to improve customer satisfaction by tracking customer metrics such as refund rates, loyalty program response and fulfillment times.  
@@ -9,7 +9,7 @@ Ghopper is an e-commerce company founded in 2018 by two Community College gradua
 - Sharing insights and observations developed from close engagement with the data.
 
 ### Stakeholder's Questions Addressed:
-  I investigated the following 4 key business questions using GHopper's customer data for 2019 to 2022. (links to [raw Excel customer data] & [ERD](images/elist_excel_erd.png)  
+  I investigated the following 4 key business questions using GHopper's customer data for 2019 to 2022. (links to [raw Excel customer data] & [ERD](images/elist_Excel_ERD.png)  
   1. [What were the overall trends in sales during this time?](#what-were-the-overall-trends-in-sales-for-2019-to-2022)
   2. [What were our monthly and yearly growth rates?](#what-were-the-monthly-and-yearly-growth-rates)
   3. [How is the new loyalty program performing?  Should we keep using it?](#how-is-the-new-loyalty-program-performing-should-we-keep-using-it)
