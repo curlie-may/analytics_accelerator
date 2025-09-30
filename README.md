@@ -10,10 +10,10 @@ Ghopper is an e-commerce company founded in 2018 by two Community College gradua
 
 ## Stakeholder's Questions Addressed:
   I investigated the following 4 key business questions using GHopper's customer data for 2019 to 2022. (link to customer data ERD)  
-  1. [What were the overall trends in sales during this time?](#overall-trends-in-sales)
-  2. [What were our monthly and yearly growth rates?](#monthly-and-yearly-growth-rates)
-  3. [How is the new loyalty program performing?  Should we keep using it?](#loyalty-program-performance)
-  4. [What were our refund rates and average order value (AOV)?](#refund-rates-and-average-order-value-aov)  
+  1. [What were the overall trends in sales during this time?](#what-were-the-overall-trends-in-sales-for-2019-to-2022)
+  2. [What were our monthly and yearly growth rates?](#what-were-the-monthly-and-yearly-growth-rates)
+  3. [How is the new loyalty program performing?  Should we keep using it?](#how-is-the-new-loyalty-program-performing-should-we-keep-using-it)
+  4. [What were our refund rates and average order value (AOV)?](#what-were-our-refund-rates-and-average-order-value-aov)  
 
  ## First Steps - clean the data
  Before addressing the Stakeholder's questions, I cleaned the Excel data and created a worksheet listing the data gaps.  
@@ -21,13 +21,13 @@ Ghopper is an e-commerce company founded in 2018 by two Community College gradua
     
 
     
-## Overall Trends in Sales
+## What were the overall trends in sales for 2019 to 2022?
 
-## Monthly and yearly growth rates
+## What were the monthly and yearly growth rates?
 
-## Loyalty Program Performance
+## How is the new loyalty program performing? Should we keep using it? 
 
-## Refund rates and average order value (AOV)
+## What were our refund rates and average order value (AOV)?
 
  How is the loyalty program performing and should we keep using it?
 Notes: To determin how the loyalty program is performing, I compared two metrics: a) the USD prices and b) number of purchases for each group. 
