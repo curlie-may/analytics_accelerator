@@ -23,6 +23,9 @@ Ghopper is an e-commerce company founded in 2018 by two Community College gradua
 
     
 ### 1. What were the overall trends in sales for 2019 to 2022?
+Below is a plot of total sales per year.  From 2019 to 2020 total sales increased by 163%.  This was followed by a drop in sales from 2021 to 2022 back to back to basline values of $4 million total sales.  Note that 2020 was during the depth of COVID and 2020 appears to reflect consumer spending during the lock-down. 
+<img width="838" height="455" alt="image" src="https://github.com/user-attachments/assets/94ed89cf-4274-4f17-8996-cedd746cdd0e" />
+
 
 ### 2. What were the monthly and yearly growth rates?
 
