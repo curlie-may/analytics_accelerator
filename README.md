@@ -22,17 +22,19 @@ GHopper is an e-commerce company founded in 2018 by two Community College gradua
     
 
     
-### 1. What were the overall trends in sales for 2019 to 2022?
-Below is a plot of total sales per year. From 2019 to 2020 total sales increased by 163%. This was followed by a drop in sales from 2021 to 2022 back to back to basline values of $4 million total sales. Note that 2020 was during the depth of COVID and 2020 appears to reflect consumer spending during the lock-down.
+### 1. What were the overall trends in sales for 2019 to 2022?  (Add per region)
+Below is a plot of total sales per year globally. From 2019 to 2020 total sales increased by 163%. This was followed by a drop in sales from 2021 to 2022 back to back to basline values of $4 million total sales. Note that 2020 was during the depth of COVID and 2020 appears to reflect consumer spending during the lock-down.
 
 <img width="350" height="200" alt="image" src="images/Total_sales_per_year.JPG" />
 
 
 ### 2. What were the monthly and yearly growth rates?
 
-### 3. How is the new loyalty program performing? Should we keep using it? 
 
+### 3. How is the new loyalty program performing? Should we keep using it? 
+The loyalty program is a customer behavior metric. 
 ### 4. What were our refund rates and average order value (AOV)?
+AOV is another customer behavior metric, it describes the ordering 
 
  How is the loyalty program performing and should we keep using it?
 Notes: To determin how the loyalty program is performing, I compared two metrics: a) the USD prices and b) number of purchases for each group. 
