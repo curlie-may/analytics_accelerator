@@ -1,8 +1,9 @@
-![Alt text](.GHopper_logo.jpg)
-# Company name:  GHopper (see logo)
+<img src="GHopper_logo.jpg" alt="GHopper_logo" width="200"/>
+
+#  Background
 Ghopper is an e-commerce company founded in 2018 by two Community College graduates.  The company began as an online site selling returned, slightly-used electronic components and equipment, mostly to hobbyists.  GHopper remains an e-commerce company selling a wider range of popular electronics and has expanded globally.  It is a data-forward company that continues to improve customer satisfaction by tracking customer metrics such as refund rates, loyalty program response and fulfillment times.  
 
-#  My role as a Data Analyst is to provide:  
+#  Data Analyst   
 1) Responses to stakeholders' questions based on an analysis of customer data. 
 2) Feedback regarding gaps in the provided customer data. 
 3) Observations that have come about from having a close relationship with the data.
