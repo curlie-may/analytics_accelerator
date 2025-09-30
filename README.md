@@ -11,13 +11,15 @@ Ghopper is an e-commerce company founded in 2018 by two Community College gradua
 ## Stakeholder's Questions Addressed:
   I investigated the following 4 key business questions using GHopper's customer data for 2019 to 2022. (link to customer data ERD)  
   1. [What were the overall trends in sales during this time?](#overall-trends-in-sales)
-  2. [Where were our monthly and yearly growth rates?](#monthly-and-yearly-growth-rates)
+  2. [What were our monthly and yearly growth rates?](#monthly-and-yearly-growth-rates)
   3. [How is the new loyalty program performing?  Should we keep using it?](#loyalty-program-performance)
   4. [What were our refund rates and average order value (AOV)?](#refund-rates-and-average-order-value-aov)  
 
  ## First Steps - clean the data
  Before addressing the Stakeholder's questions, I cleaned the Excel data and created a worksheet listing the data gaps.  
  This included  by removing  
+    
+
     
 ## Overall Trends in Sales
 
