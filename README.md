@@ -9,14 +9,14 @@ Ghopper is an e-commerce company founded in 2018 by two Community College gradua
 - Sharing insights and observations developed from close engagement with the data.
 
 ### Stakeholder's Questions Addressed:
-  I investigated the following 4 key business questions using GHopper's customer data for 2019 to 2022. (links to [Excel customer data] & [ERD](elist_excel_erd))  
+  I investigated the following 4 key business questions using GHopper's customer data for 2019 to 2022. (links to [raw Excel customer data] & [ERD](elist_excel_erd))  
   1. [What were the overall trends in sales during this time?](#what-were-the-overall-trends-in-sales-for-2019-to-2022)
   2. [What were our monthly and yearly growth rates?](#what-were-the-monthly-and-yearly-growth-rates)
   3. [How is the new loyalty program performing?  Should we keep using it?](#how-is-the-new-loyalty-program-performing-should-we-keep-using-it)
   4. [What were our refund rates and average order value (AOV)?](#what-were-our-refund-rates-and-average-order-value-aov)  
 
  ### First Steps - clean the data
- Before addressing the Stakeholder's questions, I cleaned the Excel data and created a worksheet listing the data gaps.  
+ Before addressing the Stakeholder's questions, I cleaned the Excel data and created a worksheet listing the data gaps [cleaned Excel customer data].  
  The data cleaning process consists of the following steps:
    - In Excel, I preserved the raw column data, I copied the data to in separate columns, identified as "_cleaned", I filtered the data and removed blank enteries.    This included  by removing  
     
