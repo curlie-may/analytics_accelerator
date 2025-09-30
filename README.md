@@ -34,7 +34,7 @@ Share insights and observations derived from deep engagement with the data.
 
 
 # Company name:  GHopper (see logo)
-Ghopper is an e-commerce company founded in 2018 by two Community College graduates.  The company began as an online site selling returned, slightly-used electronic components and equipment, mostly to hobbyists.  GHopper remains an e-commerce company selling a wider range of popular electronics and has expanded globally.  It is a data-forward company.  It continues to improve customer satisfaction by tracking customer metrics such as refund rates, loyalty program response and fulfillment times.  With the rapid rise of AI, GHopper is extending its product line to cover AI-supporting electronics.
+Ghopper is an e-commerce company founded in 2018 by two Community College graduates.  The company began as an online site selling returned, slightly-used electronic components and equipment, mostly to hobbyists.  GHopper remains an e-commerce company selling a wider range of popular electronics and has expanded globally.  It is a data-forward company that continues to improve customer satisfaction by tracking customer metrics such as refund rates, loyalty program response and fulfillment times.  
 
 #  My role as a Data Analyst hired by GHopper are to provide:  
 1) Responses to stakeholders' questions based on an analysis of customer data. 
@@ -42,7 +42,7 @@ Ghopper is an e-commerce company founded in 2018 by two Community College gradua
 3) Observations that have come about from having a close relationship with the data.
 
 # Business Questions Addressed:
-  As part of my analysis, I investigated teh following key business questions using GHopper's customer data, for 2019 to 2022. (link to customer data ERD)  
+  As part of my analysis, I investigated the following key business questions using GHopper's customer data, for 2019 to 2022. (link to customer data ERD)  
   1) What were the overall trends in sales during this time? (link)
   2) Where were our monthly and yearly growth rates? (link)
   3) How is the new loyalty program performing?  Should we keep using it? (Link)
