@@ -13,7 +13,9 @@ GHopper is an e-commerce company founded in 2018 by two Community College gradua
   1. [What were the overall trends in sales during this time?](#what-were-the-overall-trends-in-sales-for-2019-to-2022)
   2. [What were our monthly and yearly growth rates?](#what-were-the-monthly-and-yearly-growth-rates)
   3. [How is the new loyalty program performing?  Should we keep using it?](#how-is-the-new-loyalty-program-performing-should-we-keep-using-it)
-  4. [What were our refund rates and average order value (AOV)?](#what-were-our-refund-rates-and-average-order-value-aov)  
+  4. [What were our refund rates and average order value (AOV)?](#what-were-our-refund-rates-and-average-order-value-aov)
+  5. Refund per item per region (note country code missing for 5 returns out of 5378 ~ 0.1%)
+  6. Time from purchase to ship by region
 
  ### First Steps - clean the data
  Before addressing the Stakeholder's questions, I cleaned the Excel data and created a worksheet listing the data gaps [cleaned Excel customer data].  
