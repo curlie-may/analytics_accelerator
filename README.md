@@ -14,49 +14,38 @@ GHopper is an e-commerce company founded in 2018 by two Community College gradua
   2. [What were our refund rates?](#2-what-were-our-refund-rates)
   3. [How is the new loyalty program performing against average order value (AOV)? Should we keep using the program?](#3-how-is-the-new-loyalty-program-performing-against-average-order-value-aov-should-we-keep-using-the-program)
      
-
-    
-
-    
 ### 1. What were the overall trends in sales for 2019 to 2022?  
 Below is a plot of total sales per year globally. 
 <p align="left">
-<img width="50%" height="50%" alt="image" src="images/Total_sales_per_year_globally_v3.JPG" />
+<img width="70%" height="70%" alt="image" src="images/Total_sales_per_year_globally_v3.JPG" />
 </p>
 
-- From 2019 to 2020 total sales increased by 163%. Note that 2020 was during the depths of COVID and 2020 appears to reflect consumer spending during the lock-down. 
+- From 2019 to 2020 total sales increased by 163%. Note that 2020 was during the depths of the COVID pandemic  and the plot appears to reflect consumer spending during the stay-at-home directive. 
 - This was followed by a drop in sales from 2021 to 2022 back to a baseline value of ~$4 million total sales. 
 - Excluding pandemic-driven anomalies in 2020 and 2021, spending from 2019 to 2022 appears flat.
-- This points to a need to reinvigorate sales, perhaps through  stronger incentives programs, new product offerings, and a more impactful online presence to boost sales. 
+- Depending on the performance of 2023 sales, there may be a need to reinvigorate sales, perhaps through  stronger incentives programs, new product offerings, and a more impactful online presence. 
 
 The following plot shows similar regional sales trends.   
 
 <p align="left">
-<img width="50%" height="50%" alt="image" src="images/Total_sales_per_year_by_region_v3.JPG" />
+<img width="70%" height="70%" alt="image" src="images/Total_sales_per_year_by_region_v3.JPG" />
 </p>
 
-- All regions show sales peaks 2020 - 2021.
+- All regions show a sales peak at years 2020 and 2021.
 - North America consistently dominated, generating nearly twice the sales of the next largest region, EMEA. 
 
 
 ### 2. What were our refund rates?
-The plot below shows global refund rates.
+The plot below shows global refund rates per product line.
 
 <p align="left">
-<img width="350" height="200" alt="image" src="images/Global_refund_rates.JPG" />
+<img width="70%" height="70%" alt="image" src="images/Global_refund_rates.JPG" />
 </p>
 
-- For years 2019 to 2022, the refund rates for all products remained below the industry benchmark for e-commerce sales.
-
-The following plot shows the refund rates for each product line.
-
-<p align="left">
-<img width="350" height="200" alt="image" src="images/Global_refund_rates_per_product.JPG" />
-</p>
-
+- For the years 2019 to 2022, the refund rates for all products remained below the industry benchmark for e-commerce sales.
 - Laptops accounted for the highest percentage of refunds, with the Macbook Air and ThinkPad showing  almost identical refurn rates.
-- This suggests the need for a deeper investigation into the laptop category.
-- Key questions to explore:  were returns driven by performance dissatisfaction or by product defects? 
+- This suggests a potential need for a deeper investigation into the laptop category.
+- Key questions to explore: were returns driven by performance dissatisfaction or by product defects? 
 - If performance-related, offering alternative laptop models may reduce refund rates.
 - If defect-related, production may want to strengthen their quality control checks prior to shipment.    
 
@@ -64,7 +53,7 @@ The following plot shows the refund rates for each product line.
 The plot below shows the AOV aggregated into loyalty and non-loyalty customers.  
 
 <p align="left">
-<img width="350" height="200" alt="image" src="images/AOV_loyalty_program.JPG" />
+<img width="70%" height="70%" alt="image" src="images/AOV_loyalty_program.JPG" />
 </p>
 
 - The AOV for loyalty customers remained flat from 2019 through 2022.
