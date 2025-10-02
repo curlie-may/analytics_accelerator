@@ -10,9 +10,9 @@ GHopper is an e-commerce company founded in 2018 by two Community College gradua
 
 ### Stakeholder's Questions Addressed:
   I investigated the following 3 key business questions using GHopper's customer data for 2019 to 2022. (links to [Excel customer data] & [ERD](images/eList_Excel_ERD.png)  
-  1. [What were the overall trends in sales during this time?](#what-were-the-overall-trends-in-sales-for-2019-to-2022)
-  2. [What were our refund rates and average order value (AOV)?](#what-were-our-refund-rates-and-average-order-value-aov)
-  3. [How is the new loyalty program performing?  Should we keep using it?](#how-is-the-new-loyalty-program-performing-should-we-keep-using-it)
+  1. [What were the overall trends in sales for 2019 to 2022?](#what-were-the-overall-trends-in-sales-for-2019-to-2022)
+  2. [What were our refund rates?](#what-were-our-refund-rates-and-average-order-value-aov)
+  3. [How is the new loyalty program performing against average order value (AOV)?  Should we keep using the program?](#how-is-the-new-loyalty-program-performing-should-we-keep-using-it)
      
 
     
@@ -31,13 +31,13 @@ The plot on the right shows regional sales trends, which followed a similar patt
 </p>
 
 ### 2. What were our refund rates?
-AOV is another customer behavior metric, it describes the ordering 
+ 
 
-### 3. How is the new loyalty program performing? Does it affect AOV and should we keep using it? 
-The loyalty program is a customer behavior metric. 
+### 3. How is the new loyalty program performing against average order value (AOV)?  Should we keep using the program?
+The loyalty program and AOV are customer behavior metrics. 
 
 
- How is the loyalty program performing and should we keep using it?
+How is the loyalty program performing and should we keep using it?
 Notes: To determin how the loyalty program is performing, I compared two metrics: a) the USD prices and b) number of purchases for each group. 
 1. Before analysis I removed entries where USD price is listed as $0. (Qty: 158 entries out of 108095 total)
 2. And I removed entries where USD price is blank (Qty: 27 entries out of 108095)
