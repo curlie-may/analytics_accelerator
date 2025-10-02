@@ -26,7 +26,7 @@ Excluding pandemic-driven anomalies in 2020 and 2021, spending from 2019 to 2022
 The plot on the right shows regional sales trends, which followed a similar pattern.  North America consistently dominated, generating nearly twice the sales of the next largest region, EMEA. 
 
 <p align="center">
-<img width="350" height="200" alt="image" src="images/Total_sales_per_year_globally_v2.JPG" />
+<img width="350" height="205" alt="image" src="images/Total_sales_per_year_globally_v2.JPG" />
 <img width="350" height="200" alt="image" src="images/Total_sales_per_year_by_region_v2.JPG" />
 </p>
 
@@ -42,11 +42,11 @@ The plot below shows that for 2019 to 2022 the refund rates for all products rem
 The loyalty program and AOV are customer behavior metrics. 
 
 
-How is the loyalty program performing and should we keep using it?
-Notes: To determin how the loyalty program is performing, I compared two metrics: a) the USD prices and b) number of purchases for each group. 
-1. Before analysis I removed entries where USD price is listed as $0. (Qty: 158 entries out of 108095 total)
-2. And I removed entries where USD price is blank (Qty: 27 entries out of 108095)
-3. Number of Loyalty entries = 45686, number of Non-loyalty entries = 62276. Both groups have same order of magnitude entries.
+<p align="center">
+<img width="350" height="200" alt="image" src="images/AOV_loyalty_program.JPG" />
+</p>
+
+
 
  ### First Steps - clean the data
  Before addressing the Stakeholder's questions, I cleaned the Excel data and created a worksheet listing the data gaps [cleaned Excel customer data].  
