@@ -54,11 +54,11 @@ The following plot shows the refund rates for each product line.
 <img width="350" height="200" alt="image" src="images/Global_refund_rates_per_product.JPG" />
 </p>
 
-- The largest percentage of refunded products were laptops, both the Macbook Air and ThinkPad having almost identical refurn rates.
-- This suggests a deeper dive may be needed into this product category.
-- Potential areas of investigation are whether the returns were due to customer dissatisfaction related to  performance or due to defects.
-- Returns due to performance suggests we may want to provide alternative laptop models.
-- Returns due to defects suggests that production may want to improve their quality checks before shipment.    
+- Laptops accounted for the highest percentage of refunds, with the Macbook Air and ThinkPad showing  almost identical refurn rates.
+- This suggests the need for a deeper investigation into the laptop category.
+- Key questions to explore:  were returns driven by performance dissatisfaction or by product defects? 
+- If performance-related, offering alternative laptop models may reduce refund rates.
+- If defect-related, production may want to strengthen their quality control checks prior to shipment.    
 
 ### 3. How is the new loyalty program performing against average order value (AOV)? Should we keep using the program?
 The plot below shows the AOV aggregated into loyalty and non-loyalty customers.  
@@ -67,9 +67,9 @@ The plot below shows the AOV aggregated into loyalty and non-loyalty customers.
 <img width="350" height="200" alt="image" src="images/AOV_loyalty_program.JPG" />
 </p>
 
-- The AOV for customers in the loyalty program remains flat from 2019 to 2022.
-- The non-loyalty customers show a brief uptick in AOV from 2019 to 2020, however, they too return to baseline. - This data agrees with the sales trend shown above, that is, disregarding the 2020 and 2021 COVID-buying years, purchasing behavior has remained flat.
-- Given that the sales have returned to baseline, we may extend the loyalty program for another year and gather more data to see if purchases remain at baseline.  
-
+- The AOV for loyalty customers remained flat from 2019 through 2022.
+- Non-loyalty customers show a brief uptick in 2020 but then reverted back to pre-COVID levels.
+- This pattern aligns with the overall sales trend: excluding pandemic years (2020 - 2021), purchasing behavior has remained stable.
+- Recommendation: extend the loyalty program for another year to collect additional data and confirm whether purchasing behavior remains steady.  
 
  
