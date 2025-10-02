@@ -9,7 +9,7 @@ GHopper is an e-commerce company founded in 2018 by two Community College gradua
 - Sharing insights and observations developed from close engagement with the data.
 
 ### Stakeholder's Questions Addressed:
-  I investigated the following 3 key business questions using GHopper's customer data for 2019 to 2022. ([Excel customer data](data/Elist_Data_clean_GitHub.xls) & [ERD](images/eList_Excel_ERD.png))  
+  I investigated the following 3 key business questions using GHopper's customer data for 2019 to 2022. ([Excel customer data](data/Elist_Data_clean_GitHub.xlsx) & [ERD](images/eList_Excel_ERD.png))  
   1. [What were the overall trends in sales for 2019 to 2022?](#1-what-were-the-overall-trends-in-sales-for-2019-to-2022)
   2. [What were our refund rates?](#2-what-were-our-refund-rates)
   3. [How is the new loyalty program performing against average order value (AOV)? Should we keep using the program?](#3-how-is-the-new-loyalty-program-performing-against-average-order-value-aov-should-we-keep-using-the-program)
