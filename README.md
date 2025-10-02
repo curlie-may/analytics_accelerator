@@ -19,18 +19,22 @@ GHopper is an e-commerce company founded in 2018 by two Community College gradua
 
     
 ### 1. What were the overall trends in sales for 2019 to 2022?  
-Below is a plot of total sales per year globally (left). 
--From 2019 to 2020 total sales increased by 163%. 
--This was followed by a drop in sales from 2021 to 2022 back to back to basline values of $4 million total sales. 
--Note that 2020 was during the depth of COVID and 2020 appears to reflect consumer spending during the lock-down.
+Below is a plot of total sales per year globally. 
+<p align="left">
+<img width="50%" height="50%" alt="image" src="images/Total_sales_per_year_globally_v3.JPG" />
+</p>
 
-Excluding pandemic-driven anomalies in 2020 and 2021, spending from 2019 to 2022 appears flat. This points to a need to reinvigorate sales, perhaps through  stronger incentives programs, new product offerings, and a more impactful online presence to boost sales. 
+- From 2019 to 2020 total sales increased by 163%. 
+- This was followed by a drop in sales from 2021 to 2022 back to basline values of ~$4 million total sales. 
+- Note that 2020 was during the depth of COVID and 2020 appears to reflect consumer spending during the lock-down.
+
+- Excluding pandemic-driven anomalies in 2020 and 2021, spending from 2019 to 2022 appears flat.
+- This points to a need to reinvigorate sales, perhaps through  stronger incentives programs, new product offerings, and a more impactful online presence to boost sales. 
 
 The bottom plot shows regional sales trends that follow similar patterns.  North America consistently dominated, generating nearly twice the sales of the next largest region, EMEA. 
 
-<p align="center">
-<img width="350" height="200" alt="image" src="images/Total_sales_per_year_globally_v3.JPG" />
-<img width="350" height="200" alt="image" src="images/Total_sales_per_year_by_region_v3.JPG" />
+<p align="left">
+<img width="50%" height="50%" alt="image" src="images/Total_sales_per_year_by_region_v3.JPG" />
 </p>
 
 ### 2. What were our refund rates?
