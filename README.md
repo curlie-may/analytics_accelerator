@@ -42,7 +42,7 @@ The following plot shows similar regional sales trends.
 ### 2. What were our refund rates?
 The plot below shows global refund rates.
 
-<p align="center">
+<p align="left">
 <img width="350" height="200" alt="image" src="images/Global_refund_rates.JPG" />
 </p>
 
@@ -50,23 +50,26 @@ The plot below shows global refund rates.
 
 The following plot shows the refund rates for each product line.
 
+<p align="left">
+<img width="350" height="200" alt="image" src="images/Global_refund_rates_per_product.JPG" />
+</p>
 
-- The largest percentage of returned products were due to laptops, both the Macbook Air and ThinkPad haveing almost identical return rates.  This suggests a deeper dive into this product category.  Are the returns due to customer dissatisfaction due to performance or due to defects.  If due to performance we may want to provide different laptop models.  Poor defect performance suggests production may want to improve their quality checks before shipment.    
-
-
+- The largest percentage of refunded products were laptops, both the Macbook Air and ThinkPad having almost identical refurn rates.
+- This suggests a deeper dive may be needed into this product category.
+- Potential areas of investigation are whether the returns were due to customer dissatisfaction related to  performance or due to defects.
+- Returns due to performance suggests we may want to provide alternative laptop models.
+- Returns due to defects suggests that production may want to improve their quality checks before shipment.    
 
 ### 3. How is the new loyalty program performing against average order value (AOV)? Should we keep using the program?
-The plot below shows that the AOV for customers in the loyalty program remains flat from 2019 to 2022.  The non-loyalty customers show a brief uptick in AOV from 2019 to 2020, however, they too return to baseline.    The loyalty customers   are customer behavior metrics. 
+The plot below shows the AOV aggregated into loyalty and non-loyalty customers.  
 
-
-<p align="center">
+<p align="left">
 <img width="350" height="200" alt="image" src="images/AOV_loyalty_program.JPG" />
 </p>
 
+- The AOV for customers in the loyalty program remains flat from 2019 to 2022.
+- The non-loyalty customers show a brief uptick in AOV from 2019 to 2020, however, they too return to baseline. - This data agrees with the sales trend shown above, that is, disregarding the 2020 and 2021 COVID-buying years, purchasing behavior has remained flat.
+- Given that the sales have returned to baseline, we may extend the loyalty program for another year and gather more data to see if purchases remain at baseline.  
 
 
- ### First Steps - clean the data
- Before addressing the Stakeholder's questions, I cleaned the Excel data and created a worksheet listing the data gaps [cleaned Excel customer data].  
- The process consists of the following steps:
-   - In Excel, I preserved the raw column data, I copied the data to in separate columns, identified as "_cleaned", I filtered the data and removed blank enteries.    This included  by removing  
-
+ 
