@@ -11,8 +11,8 @@ GHopper is an e-commerce company founded in 2018 by two Community College gradua
 ### Stakeholder's Questions Addressed:
   I investigated the following 3 key business questions using GHopper's customer data for 2019 to 2022. (links to [Excel customer data] & [ERD](images/eList_Excel_ERD.png)  
   1. [What were the overall trends in sales for 2019 to 2022?](#1-what-were-the-overall-trends-in-sales-for-2019-to-2022)
-  2. [What were our refund rates?](#2-what-were-our-refund-rates-and-average-order-value-aov)
-  3. [How is the new loyalty program performing against average order value (AOV)?  Should we keep using the program?](#3-how-is-the-new-loyalty-program-performing-should-we-keep-using-it)
+  2. [What were our refund rates?](#2-what-were-our-refund-rates)
+  3. [How is the new loyalty program performing against average order value (AOV)? Should we keep using the program?](#3-how-is-the-new-loyalty-program-performing-against-average-order-value-aov-should-we-keep-using-the-program)
      
 
     
@@ -33,7 +33,7 @@ The plot on the right shows regional sales trends, which followed a similar patt
 ### 2. What were our refund rates?
  
 
-### 3. How is the new loyalty program performing against average order value (AOV)?  Should we keep using the program?
+### 3. How is the new loyalty program performing against average order value (AOV)? Should we keep using the program?
 The loyalty program and AOV are customer behavior metrics. 
 
 
