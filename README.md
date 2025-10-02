@@ -56,7 +56,7 @@ The plot below shows the AOV aggregated into loyalty and non-loyalty customers.
 <img width="70%" height="70%" alt="image" src="images/AOV_loyalty_program.JPG" />
 </p>
 
-- The AOV for loyalty customers remained flat from 2019 through 2022.
+- On average, loyalty customers' purchasing behavior showed little change, with order sizes remaining flat from 2019 through 2022.
 - Non-loyalty customers show a brief uptick in 2020 but then reverted back to pre-COVID levels.
 - This pattern aligns with the overall sales trend: excluding pandemic years (2020 - 2021), purchasing behavior has remained stable.
 - Recommendation: extend the loyalty program for another year to collect additional data and confirm whether purchasing behavior remains steady.  
