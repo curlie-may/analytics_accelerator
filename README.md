@@ -31,7 +31,7 @@ The following plot shows similar regional sales trends.
 <img width="70%" height="70%" alt="image" src="images/Total_sales_per_year_by_region_v3.JPG" />
 </p>
 
-- All regions show a sales peak at years 2020 and 2021.
+- All regions show sales peaks at years 2020 and 2021.
 - North America consistently dominated, generating nearly twice the sales of the next largest region, EMEA. 
 
 
@@ -43,7 +43,7 @@ The plot below shows global refund rates per product line.
 </p>
 
 - For the years 2019 to 2022, the refund rates for all products remained below the industry benchmark for e-commerce sales.
-- Laptops accounted for the highest percentage of refunds, with the Macbook Air and ThinkPad showing  almost identical refurn rates.
+- Laptops accounted for the highest percentage of refunds, with the Macbook Air and ThinkPad showing  almost identical refund rates.
 - This suggests a potential need for a deeper investigation into the laptop category.
 - Key questions to explore: were returns driven by performance dissatisfaction or by product defects? 
 - If performance-related, offering alternative laptop models may reduce refund rates.
