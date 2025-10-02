@@ -26,8 +26,8 @@ Excluding pandemic-driven anomalies in 2020 and 2021, spending from 2019 to 2022
 The plot on the right shows regional sales trends, which followed a similar pattern.  North America consistently dominated, generating nearly twice the sales of the next largest region, EMEA. 
 
 <p align="center">
-<img width="350" height="200" alt="image" src="images/Total_sales_per_year_globally.JPG" />
-<img width="350" height="200" alt="image" src="images/Total_sales_per_year_by_region.JPG" />
+<img width="350" height="200" alt="image" src="images/Total_sales_per_year_globally_v2.JPG" />
+<img width="350" height="200" alt="image" src="images/Total_sales_per_year_by_region_v2.JPG" />
 </p>
 
 ### 2. What were our refund rates?
