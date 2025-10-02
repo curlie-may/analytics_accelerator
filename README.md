@@ -31,7 +31,12 @@ The plot on the right shows regional sales trends, which followed a similar patt
 </p>
 
 ### 2. What were our refund rates?
- 
+The plot below shows that for 2019 to 2022 the refund rates for all products remained below the industry benchmark for e-commerce sales.  The largest percentage of returned products were due to laptops, both the Macbook Air and ThinkPad haveing almost identical return rates.  This suggests a deeper dive into this product category.  Are the returns due to customer dissatisfaction due to performance or due to defects.  If due to performance we may want to provide different laptop models.  Poor defect performance suggests production may want to improve their quality checks before shipment.    
+
+<p align="center">
+<img width="350" height="200" alt="image" src="images/Global_refund_rates.JPG" />
+</p>
+
 
 ### 3. How is the new loyalty program performing against average order value (AOV)? Should we keep using the program?
 The loyalty program and AOV are customer behavior metrics. 
