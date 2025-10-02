@@ -26,8 +26,8 @@ Excluding pandemic-driven anomalies in 2020 and 2021, spending from 2019 to 2022
 The bottom plot shows regional sales trends that follow similar patterns.  North America consistently dominated, generating nearly twice the sales of the next largest region, EMEA. 
 
 <p align="center">
-<img width="350" height="200" alt="image" src="images/Total_sales_per_year_globally_v4.png" />
-<img width="350" height="200" alt="image" src="images/Total_sales_per_year_by_region_v4.png" />
+<img width="350" height="200" alt="image" src="images/Total_sales_per_year_globally_v3.JPG" />
+<img width="350" height="200" alt="image" src="images/Total_sales_per_year_by_region_v3.JPG" />
 </p>
 
 ### 2. What were our refund rates?
@@ -39,7 +39,7 @@ The plot below shows that for 2019 to 2022 the refund rates for all products rem
 
 
 ### 3. How is the new loyalty program performing against average order value (AOV)? Should we keep using the program?
-The loyalty program and AOV are customer behavior metrics. 
+The plot below shows that the AOV for customers in the loyalty program remains flat from 2019 to 2022.  The non-loyalty customers show a brief uptick in AOV from 2019 to 2020, however, they too return to baseline.    The loyalty customers   are customer behavior metrics. 
 
 
 <p align="center">
