@@ -24,25 +24,35 @@ Below is a plot of total sales per year globally.
 <img width="50%" height="50%" alt="image" src="images/Total_sales_per_year_globally_v3.JPG" />
 </p>
 
-- From 2019 to 2020 total sales increased by 163%. 
-- This was followed by a drop in sales from 2021 to 2022 back to basline values of ~$4 million total sales. 
-- Note that 2020 was during the depth of COVID and 2020 appears to reflect consumer spending during the lock-down.
-
+- From 2019 to 2020 total sales increased by 163%. Note that 2020 was during the depths of COVID and 2020 appears to reflect consumer spending during the lock-down. 
+- This was followed by a drop in sales from 2021 to 2022 back to a baseline value of ~$4 million total sales. 
 - Excluding pandemic-driven anomalies in 2020 and 2021, spending from 2019 to 2022 appears flat.
 - This points to a need to reinvigorate sales, perhaps through  stronger incentives programs, new product offerings, and a more impactful online presence to boost sales. 
 
-The bottom plot shows regional sales trends that follow similar patterns.  North America consistently dominated, generating nearly twice the sales of the next largest region, EMEA. 
+The following plot shows similar regional sales trends.   
 
 <p align="left">
 <img width="50%" height="50%" alt="image" src="images/Total_sales_per_year_by_region_v3.JPG" />
 </p>
 
+- All regions show sales peaks 2020 - 2021.
+- North America consistently dominated, generating nearly twice the sales of the next largest region, EMEA. 
+
+
 ### 2. What were our refund rates?
-The plot below shows that for 2019 to 2022 the refund rates for all products remained below the industry benchmark for e-commerce sales.  The largest percentage of returned products were due to laptops, both the Macbook Air and ThinkPad haveing almost identical return rates.  This suggests a deeper dive into this product category.  Are the returns due to customer dissatisfaction due to performance or due to defects.  If due to performance we may want to provide different laptop models.  Poor defect performance suggests production may want to improve their quality checks before shipment.    
+The plot below shows global refund rates.
 
 <p align="center">
 <img width="350" height="200" alt="image" src="images/Global_refund_rates.JPG" />
 </p>
+
+- For years 2019 to 2022, the refund rates for all products remained below the industry benchmark for e-commerce sales.
+
+The following plot shows the refund rates for each product line.
+
+
+- The largest percentage of returned products were due to laptops, both the Macbook Air and ThinkPad haveing almost identical return rates.  This suggests a deeper dive into this product category.  Are the returns due to customer dissatisfaction due to performance or due to defects.  If due to performance we may want to provide different laptop models.  Poor defect performance suggests production may want to improve their quality checks before shipment.    
+
 
 
 ### 3. How is the new loyalty program performing against average order value (AOV)? Should we keep using the program?
