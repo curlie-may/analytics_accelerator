@@ -1,7 +1,7 @@
 <img src="images/GHopper_logo.jpg" alt="GHopper_logo" width="300"/>
 
-###  Executive Summary............
-GHopper is a U.S. based, e-commerce company with a global customer base that sells a wide range of consumer electronics.  
+###  Executive Summary
+GHopper is a U.S. based, e-commerce company with a global customer base that sells a wide range of consumer electronics.  Analysis of customer data from 2019 to 2022 reflects a company that has strong sales but   
 --Sales from 2018 to 2022 show a spike an impact  forward company that continues to improve customer satisfaction by tracking customer metrics such as refund rates, loyalty program response and fulfillment times.  
 
 ###  This analysis aims to address the following:   
@@ -10,12 +10,12 @@ GHopper is a U.S. based, e-commerce company with a global customer base that sel
 - Share insights and observations of customer spending and behavior. 
 
 ### Stakeholder's Questions Addressed:
-  I investigated the following 3 key business questions using GHopper's customer data for 2019 to 2022. ([Excel customer data](data/Elist_Data_clean_GitHub.xlsx) & [ERD](images/eList_Excel_ERD.png))  
+  Three key business metrics are investigated using GHopper's customer data from 2019 to 2022. ([Excel customer data](data/Elist_Data_clean_GitHub.xlsx) & [ERD](images/eList_Excel_ERD.png))  
   1. [What were the overall trends in sales for 2019 to 2022?](#1-what-were-the-overall-trends-in-sales-for-2019-to-2022)
   2. [What were our refund rates?](#2-what-were-our-refund-rates)
   3. [How is the new loyalty program performing against average order value (AOV)? Should we keep using the program?](#3-how-is-the-new-loyalty-program-performing-against-average-order-value-aov-should-we-keep-using-the-program)
      
-### 1. What were the overall trends in sales for 2019 to 2022?  
+### 1. Overall trends in sales from 2019 to 2022  
 Below is a plot of total sales per year globally. 
 <p align="left">
 <img width="70%" height="70%" alt="image" src="images/Total_sales_per_year_globally_v3.JPG" />
