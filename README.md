@@ -1,12 +1,13 @@
 <img src="images/GHopper_logo.jpg" alt="GHopper_logo" width="300"/>
 
 ###  Executive Summary............
-GHopper is an e-commerce company founded in 2016 by two Community College graduates.  The company began as an online site selling returned, slightly-used electronic components and equipment, mostly to hobbyists.  GHopper remains an e-commerce company selling a wider range of popular electronics and has expanded globally.  It is a data-forward company that continues to improve customer satisfaction by tracking customer metrics such as refund rates, loyalty program response and fulfillment times.  
+GHopper is a U.S. based, e-commerce company with a global customer base that sells a wide range of consumer electronics.  
+--Sales from 2018 to 2022 show a spike an impact  forward company that continues to improve customer satisfaction by tracking customer metrics such as refund rates, loyalty program response and fulfillment times.  
 
-###  As a Data Analyst for GHopper I am responsible for:   
-- Answering stakeholder questions through analysis of customer data.
-- Identifying gaps and limitations in the datasets provided.
-- Sharing insights and observations developed from close engagement with the data.
+###  This analysis aims to address the following:   
+- Answer stakeholder questions through analysis of customer data.
+- Identify gaps and limitations in the datasets provided.
+- Share insights and observations of customer spending and behavior. 
 
 ### Stakeholder's Questions Addressed:
   I investigated the following 3 key business questions using GHopper's customer data for 2019 to 2022. ([Excel customer data](data/Elist_Data_clean_GitHub.xlsx) & [ERD](images/eList_Excel_ERD.png))  
