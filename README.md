@@ -1,7 +1,7 @@
 <img src="images/GHopper_logo.jpg" alt="GHopper_logo" width="300"/>
 
 ###  Executive Summary
-GHopper is a U.S.-based e-commerce company with a global customer base that sells a wide range of consumer electronics. An analysis of customer data from 2019 to 2022 shows a performance peak in 2020, most likely driven by COVID-related spending, followed by a steady return to pre-pandemic revenue levels.
+GHopper is an e-commerce retailer with a worldwide customer base, offering a wide range of consumer electronics. An analysis of customer data from 2019 to 2022 revealed a performance peak in 2020, likely driven by COVID-related spending, followed by a steady return to pre-pandemic revenue levels.
 
 Regional sales indicate that North America remains the strongest market, generating nearly twice the revenue of EMEA countries. Refund-rate analysis reveals that laptops had the highest return rate, while the loyalty program showed limited influence on increasing average order value (AOV).
 
