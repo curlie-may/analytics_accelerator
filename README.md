@@ -1,8 +1,9 @@
 <img src="images/GHopper_logo.jpg" alt="GHopper_logo" width="300"/>
 
 ###  Executive Summary
-GHopper is a U.S. based, e-commerce company with a global customer base that sells a wide range of consumer electronics.  Analysis of customer data from 2019 to 2022 reflects a company that has strong sales but   
---Sales from 2018 to 2022 show a spike an impact  forward company that continues to improve customer satisfaction by tracking customer metrics such as refund rates, loyalty program response and fulfillment times.  
+GHopper is a U.S.-based e-commerce company with a global customer base that sells a wide range of consumer electronics. An analysis of customer data from 2019 to 2022 shows a performance peak in 2020, most likely driven by COVID-related spending, followed by a steady return to pre-pandemic revenue levels.
+
+Regional sales indicate that North America remains the strongest market, generating nearly twice the revenue of EMEA countries. Refund-rate analysis reveals that laptops had the highest return rate, while the loyalty program showed limited influence on increasing average order value (AOV).
 
 ###  This analysis aims to address the following:   
 - Answer stakeholder questions through analysis of customer data.
@@ -11,11 +12,11 @@ GHopper is a U.S. based, e-commerce company with a global customer base that sel
 
 ### Stakeholder's Questions Addressed:
   Three key business metrics are investigated using GHopper's customer data from 2019 to 2022. ([Excel customer data](data/Elist_Data_clean_GitHub.xlsx) & [ERD](images/eList_Excel_ERD.png))  
-  1. [What were the overall trends in sales for 2019 to 2022?](#1-what-were-the-overall-trends-in-sales-for-2019-to-2022)
-  2. [What were our refund rates?](#2-what-were-our-refund-rates)
-  3. [How is the new loyalty program performing against average order value (AOV)? Should we keep using the program?](#3-how-is-the-new-loyalty-program-performing-against-average-order-value-aov-should-we-keep-using-the-program)
+  1. [Overall trends in sales for 2019 to 2022](#1-overall-trends-in-sales-for-2019-to-2022)
+  2. [Refund rates for 2019 to 2022](#2-refund-rates-for-2019-to-2022)
+  3. [Performance of the new loyalty program against average order value (AOV)](#3-performance-of-the-new-loyalty-program-against-average-order-value-aov)
      
-### 1. Overall trends in sales from 2019 to 2022  
+### 1. Overall trends in sales for 2019 to 2022
 Below is a plot of total sales per year globally. 
 <p align="left">
 <img width="70%" height="70%" alt="image" src="images/Total_sales_per_year_globally_v3.JPG" />
@@ -36,7 +37,7 @@ The following plot shows similar regional sales trends.
 - North America consistently dominated, generating nearly twice the sales of the next largest region, EMEA. 
 
 
-### 2. What were our refund rates?
+### 2. Refund rates for 2019 to 2022
 The plot below shows global refund rates per product line.
 
 <p align="left">
@@ -50,7 +51,7 @@ The plot below shows global refund rates per product line.
 - If performance-related, offering alternative laptop models may reduce refund rates.
 - If defect-related, production may want to strengthen their quality control checks prior to shipment.    
 
-### 3. How is the new loyalty program performing against average order value (AOV)? Should we keep using the program?
+### 3. Performance of the new loyalty program against average order value (AOV)
 The plot below shows the AOV aggregated into loyalty and non-loyalty customers.  
 
 <p align="left">
