@@ -19,7 +19,7 @@ Regional sales indicate that North America remains the strongest market, generat
 ### 1. Overall trends in sales for 2019 to 2022
 Below is a plot of total sales per year globally. 
 <p align="left">
-<img width="70%" height="70%" alt="image" src="images/Total_sales_per_year_globally_v5.JPG" />
+<img width="70%" height="70%" alt="image" src="images/Total_sales_per_year_globally_v6.JPG" />
 </p>
 
 - From 2019 to 2020 total sales increased by 163%. Note that 2020 was during the depths of the COVID pandemic  and the plot appears to reflect consumer spending during the stay-at-home directive. 
