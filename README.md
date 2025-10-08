@@ -30,7 +30,7 @@ Below is a plot of total sales per year globally.
 The following plot shows similar regional sales trends.   
 
 <p align="left">
-<img width="70%" height="70%" alt="image" src="images/Total_sales_per_year_by_region_v3.JPG" />
+<img width="70%" height="70%" alt="image" src="images/Total_sales_per_year_by_region_v5.JPG" />
 </p>
 
 - All regions show sales peaks at years 2020 and 2021.
@@ -41,7 +41,7 @@ The following plot shows similar regional sales trends.
 The plot below shows global refund rates per product line.
 
 <p align="left">
-<img width="70%" height="70%" alt="image" src="images/Global_refund_rates.JPG" />
+<img width="70%" height="70%" alt="image" src="images/Global_refund_rates_v2.JPG" />
 </p>
 
 - For the years 2019 to 2022, the refund rates for all products remained below the industry benchmark for e-commerce sales.
@@ -55,7 +55,7 @@ The plot below shows global refund rates per product line.
 The plot below shows the AOV aggregated into loyalty and non-loyalty customers.  
 
 <p align="left">
-<img width="70%" height="70%" alt="image" src="images/AOV_loyalty_program.JPG" />
+<img width="70%" height="70%" alt="image" src="images/AOV_loyalty_program_v2.JPG" />
 </p>
 
 - On average, loyalty customers' purchasing behavior showed little change, with order sizes remaining flat from 2019 through 2022.
