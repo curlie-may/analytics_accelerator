@@ -1,3 +1,12 @@
+--App Click_through Rate (CTR)
+select app_id, 
+      round(100.0 * ((count (case when event_type like 'c%' then 1 end)* 1.0) 
+                    / count (case when event_type like 'i%' then 1 end)),2) as ctr
+from events
+where extract (year from timestamp) = 2022
+group by app_id;
+
+
 --Data Science Skills
 SELECT candidate_id
 FROM candidates
