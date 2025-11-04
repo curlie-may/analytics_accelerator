@@ -1,3 +1,10 @@
+--Second Day Confirmation
+select user_id 
+from emails
+left join texts
+on emails.email_id = texts.email_id
+where extract(day from action_date) = extract(day from signup_date) + 1 AND signup_action = 'Confirmed'
+
 --App Click_through Rate (CTR)
 select app_id, 
       round(100.0 * ((count (case when event_type like 'c%' then 1 end)* 1.0) 
