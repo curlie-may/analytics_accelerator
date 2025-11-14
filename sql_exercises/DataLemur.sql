@@ -1,3 +1,11 @@
+--Page With No Likes
+select pages.page_id
+from pages
+left join page_likes
+on pages.page_id = page_likes.page_id
+where liked_date is NULL
+order by page_id asc
+
 --Second Day Confirmation
 select user_id 
 from emails
