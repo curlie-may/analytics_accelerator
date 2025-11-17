@@ -6,7 +6,7 @@ with t1 as (
   from employees as e
   left join queries as q
       on e.employee_id = q.employee_id
-      --why not use WHERE???
+      --why not use WHERE? because WHERE filters out the zero-valued entries, they don't exist anymore
       and query_starttime >= '2023-07-01'
       and query_starttime < '2023-10-01'
   group by e.employee_id
