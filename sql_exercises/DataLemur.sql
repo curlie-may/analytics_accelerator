@@ -1,3 +1,24 @@
+--IBM db2 Product Analytics
+with t1 as (
+  select 
+    e.employee_id,
+    count(distinct q.query_id) as count_queries
+  from employees as e
+  left join queries as q
+      on e.employee_id = q.employee_id
+      --why not use WHERE???
+      and query_starttime >= '2023-07-01'
+      and query_starttime < '2023-10-01'
+  group by e.employee_id
+)
+select count_queries as unique_queries,
+    count(*) as employee_count
+from t1
+group by count_queries
+order by count_queries
+
+
+
 --Page With No Likes
 select pages.page_id
 from pages
