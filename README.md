@@ -1,11 +1,11 @@
 <img src="images/GHopper_logo.jpg" alt="GHopper_logo" width="300"/>
 
 ###  Executive Summary
-GHopper is an e-commerce retailer with a worldwide customer base, offering a wide range of consumer electronics. An analysis of customer data from 2019 to 2022 revealed a performance peak in 2020, likely driven by COVID-related spending, followed by a steady return to pre-pandemic revenue levels.
+GHopper is an e-commerce retailer with a worldwide customer base, offering a wide range of consumer electronics. An analysis of global customer data from 2019 to 2022 revealed a total sales peak in 2020, likely driven by COVID-related spending, followed by a steady return to pre-pandemic revenue levels.
 
-Regional sales indicate that North America remains the strongest market, generating nearly twice the revenue of EMEA countries. Refund-rate analysis reveals that laptops had the highest return rate, while the loyalty program showed limited influence on increasing average order value (AOV).
+Regional sales indicate that North America remains the strongest market, generating nearly twice the revenue of the next highest market being the EMEA countries. Refund-rate analysis reveals that laptops had the highest return rate, while the loyalty program showed limited influence on increasing average order value (AOV).
 
-###  This analysis aims to address the following:   
+###  This analysis addresses the following:   
 - Answer stakeholder questions through analysis of customer data.
 - Identify gaps and limitations in the datasets provided.
 - Share insights and observations of customer spending and behavior. 
