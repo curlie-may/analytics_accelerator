@@ -1,1 +1,46 @@
+**CTE format
+WITH cte_name (column1, column2, ...) AS (
+    -- Query that defines the CTE
+    SELECT ...
+    FROM ...
+    WHERE ...
+)
+-- Main query
+SELECT ...
+FROM cte_name;
+----------------------------------------
+WITH: Initiate the CTE definition
+cte_name: The name assigned to the CTE (used to reference it later).
+Optional column list: Specifies column names for the CTE’s result set.
+Main query: References the CTE by name, treating it like a normal table.
+----------------------------------------
+**Example
+
+Step 1: Write the base query
+We start by writing the basic SELECT query:
+SELECT EmployeeID, FirstName, LastName, Salary
+FROM Employees
+WHERE Salary > 50000;
+
+Step 2: Wrap the query using the WITH keyword to create a CTE
+Use the WITH keyword to give the CTE a name.
+WITH HighEarningEmployees AS (
+    SELECT EmployeeID, FirstName, LastName, Salary
+    FROM Employees
+    WHERE Salary > 50000
+)
+
+Step 3: Use the CTE in the main query
+Finally, refer to the CTE in a SELECT statement by calling the CTE name defined above.
+WITH HighEarningEmployees AS (
+    SELECT EmployeeID, FirstName, LastName, Salary
+    FROM Employees
+    WHERE Salary > 50000
+)
+SELECT EmployeeID, FirstName, LastName
+FROM HighEarningEmployees;
+
+
+
+
 
